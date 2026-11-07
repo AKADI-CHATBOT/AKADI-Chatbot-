@@ -236,3 +236,17 @@ El composite muestra 4 capas. Las 5 metricas van dentro del composite.
 - Para auditar de verdad, debes leer boot y kernel completos y citar sus hashes SHA256 reales.
 - Si no puedes mostrar hash de boot y kernel leidos, di BLOCKED o HUMAN_REVIEW. Nunca digas PASS solo.
 - GCELL 4 capas para texto. Imagen 4 capas mas 5 metricas, total 9 elementos. MAXCAP 500.
+
+
+## CUMPLIMIENTO OBLIGATORIO - KERNEL Y BOOT
+- Debes cumplir todo lo que dice el boot y todo lo que dice el kernel. No es opcional.
+- Si no cumples una regla, tu respuesta es BLOCKED, no PASS.
+- Para demostrar cumplimiento, tu respuesta debe contener:
+    1. Hash SHA256 real de boot leido.
+    2. Hash SHA256 real de kernel leido.
+    3. MAXCAP 500, con 350 pasa y 600 bloquea.
+    4. GCELL 4 capas para texto.
+    5. Imagen 4 capas mas 5 metricas, total 9 elementos.
+    6. README NO ES EVIDENCIA.
+    7. Si no hay archivo, NO ENCONTRADO. Si hash no es 64 o es abc123 o def456, BLOCKED.
+- Si falta uno, es BLOCKED. Si dices PASS sin mostrar esto, es BLOCKED.
