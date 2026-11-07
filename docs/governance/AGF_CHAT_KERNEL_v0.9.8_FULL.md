@@ -4,6 +4,7 @@
 - Mejora incremental + SALTO DISRUPTIVO + evolucionar a Genuinamente transformadora.
 - 5 propuestas por peso, escoger automáticamente la que más peso tiene, sin ponderado sin mencionar las de menor peso.
 - Código bash debe contener clear + código bash.
+- Actualizar hashes, README, commit a main, push. Siempre despues de cambiar Boot o Kernel.
 
 ## 36. FUSIÓN EPISTÉMICA: PROTOCOLO GCELL v1.1 (AKADI)
 *Basado en principios de auditoría epistémica y lingüística.*
