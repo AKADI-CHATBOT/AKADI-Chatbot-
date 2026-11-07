@@ -260,6 +260,7 @@ El composite muestra 4 capas. Las 5 metricas van dentro del composite.
 
 ## CUMPLIMIENTO OBLIGATORIO - KERNEL Y BOOT
 - Debes cumplir todo lo que dice el boot y todo lo que dice el kernel. No es opcional.
+- Cita línea exacta solo si verificada con grep, si no, di NO ENCONTRADO línea, no inventes número. Si preguntas, BLOCKED.
 - Si no cumples una regla, tu respuesta es BLOCKED, no PASS.
 - Para demostrar cumplimiento, tu respuesta debe contener:
     1. Hash SHA256 real de boot leido.
