@@ -290,3 +290,10 @@ Nota de honestidad Bloque 36: Secciones 1 a 35 no estan en este archivo AGF_CHAT
 - MIL-B cita JSON, no calcula. HIL decide.
 - Dual-MIL sigue DECLARADO, no VERIFICADO, hasta que haya acta con JSON de SIL.
 - README NO ES EVIDENCIA.
+
+## 45. ACLARACION TERMINO PASS - v1.2 - 2026-11-07
+- SIL puede decir PASS en composite_audit.json. Es veredicto de motor, no de MIL-B.
+- MIL-B nunca dice PASS. Su veredicto es HUMAN_REVIEW o BLOCKED, aunque cite un SIL_PASS.
+- PASS-CHECK se renombra a HUMAN_REVIEW-CHECK en README y en este Kernel donde se refiera a prueba de cumplimiento de MIL-B.
+- Si MIL-B emite PASS como propio, es BLOCKED por violacion de rol.
+- README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 capas mas 5 metricas, total 9 elementos.

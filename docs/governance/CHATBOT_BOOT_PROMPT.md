@@ -215,3 +215,10 @@ GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
 - SIL entrega JSON: {"boot_hash": "<64>", "kernel_hash": "<64>", "input_len": N, "input_hash": "<64>"}
 - MIL-B solo cita ese JSON. No calcula hash.
 - HIL valida el JSON y decide. Sin JSON de SIL, MIL-B dice BLOCKED.
+
+## 12. ACLARACION TERMINO PASS - v1.2 - 2026-11-07
+- MIL-B nunca emite PASS como veredicto propio. Solo HUMAN_REVIEW o BLOCKED.
+- SIL si puede emitir PASS en su JSON, porque SIL es codigo Python que ejecuta. MIL-B solo cita ese JSON como [CITA SIL].
+- PASS-CHECK en README no es veredicto MIL-B. Se renombra a HUMAN_REVIEW-CHECK para evitar confusion.
+- Si MIL-B escribe PASS como veredicto propio, es violacion y queda BLOCKED.
+- Distincion: SIL_PASS es veredicto de motor. MIL-B_VEREDICTO es HUMAN_REVIEW o BLOCKED. Sin mezclar.
