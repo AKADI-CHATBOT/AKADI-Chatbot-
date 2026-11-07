@@ -138,28 +138,29 @@ SIMULACION = DESACTIVADA (Declarado, operatividad pendiente de verificación) ·
 ---
 
 ## 40. NOTA DE ESTADO (IMPLEMENTACIÓN PARCIAL)
+Regla ingeniero PhD Bloque 40: No adular, no complacer. Lista de implementado sin archivo es DECLARADO, no VERIFICADO. Si no hay ls y hash, di NO ENCONTRADO.
 
 Este kernel es una **especificación de gobernanza**, no un sistema operativo.
 
 ### Implementado en código:
-- ✅ MAXCAP: 500 chars input, 10MB imagen, 5KB output, 60s timeout
-- ✅ Motor forense de 9 capas (`tools/agf_full_9_layers.py`)
+- ✅ MAXCAP: 500 chars input, 10MB imagen, 5KB output, 60s timeout [Solo MAXCAP 500 verificado con test_maxcap500.py, 10MB 5KB 60s DECLARADO pendiente de medicion]
+- ✅ Motor forense de 9 elementos (4 capas forenses + 5 metricas) (`tools/agf_full_9_layers.py`)
 - ✅ API Flask con validaciones (`api_server.py`)
-- ✅ Tests unitarios (13 tests, `tests/`)
+- ✅ Tests unitarios (13 tests, `tests/`) [Verificado con ls: tests/ existe con 5 entradas, contar si son 13 tests reales]
 - ✅ Hash de integridad (`tools/check_kernel.py`)
 
 ### NO implementado (especificación solamente):
 - ❌ N17, N20, N30, N35 (nodos judiciales)
 - ❌ S31 (puente AES-256-GCM)
 - ❌ S34 (firma colegiada)
-- ❌ ACTA_FINAL_SELLADA_CLOSED
+- ❌ ACTA_FINAL_SELLADA_CLOSED salida NO ENCONTRADO, script tools/acta_final.py SI existe, salida no generada
 - ❌ Hash-Chain C1-C4
 
-**Regla de honestidad:** Si algo NO está en la lista de implementado, no existe como código. Es teoría.
+**Regla de honestidad:** Si algo NO está en la lista de implementado, no existe como código. Es teoría. [Si esta en lista de implementado debe tener archivo verificable con ls y hash, si no, es DECLARADO no VERIFICADO]
 
 ---
 
-*Documento actualizado el 2026-11-06 con correcciones de deuda técnica.*
+*Documento actualizado el 2026-11-06 con correcciones de deuda técnica.* [Fecha desactualizada, kernel cambio despues, ver git log]
 
 ---
 
@@ -223,7 +224,7 @@ El kernel referencia las siguientes herramientas ejecutables:
 
 | Herramienta | Función | Estado |
 |-------------|---------|--------|
-| `tools/agf_full_9_layers.py` | Motor forense de 9 capas (ArcFace, Fourier, Shazam, SSIM, Color + 4 diagnósticas) | ✅ Implementado |
+| `tools/agf_full_9_layers.py` | Motor forense de 9 elementos (4 capas forenses + 5 metricas) (ArcFace, Fourier, Shazam, SSIM, Color + 4 diagnósticas) | ✅ Implementado |
 | `tools/acta_final.py` | Genera el Acta Final firmada con SHA-256 (certificado para el cliente) | ✅ Implementado |
 | `tools/check_kernel.py` | Verifica la integridad del kernel (hash SHA-256) | ✅ Implementado |
 | `tools/auto_auditor.py` | Auditor automático (integración con APIs externas) | ✅ Implementado |
