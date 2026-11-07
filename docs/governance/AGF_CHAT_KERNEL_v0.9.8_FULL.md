@@ -218,3 +218,9 @@ El kernel referencia las siguientes herramientas ejecutables:
 ### Regla de Fail-Closed
 
 Si cualquiera de estas herramientas falta, el sistema entra en `BLOCKED`. No puede haber un término S04 sin el acta final firmada.
+
+## REGLAS GENERALES INALTERABLES - APLICAN EN BOOT Y KERNEL
+1. Antes de cambiar algo en el repositorio se debe verificar.
+2. Cada regla debe cumplirse realmente, no simulacion.
+3. Cada vez que se pide proponer, deben ser 5 propuestas reales, nada de simulacion, por peso escoger automaticamente la que tiene mas peso, no preguntar.
+Ver archivo: docs/governance/REGLAS_GENERALES_INALTERABLES.md

@@ -141,3 +141,25 @@ El motor real ejecuta 9 capas forenses, no 4:
 - [9] Base64 Differential (diagnóstico binario)
 
 **Regla de oro:** Las capas 1-5 son las únicas que dictan PASS o BLOCKED. Las capas 6-9 son diagnóstico, no bloquean por sí solas.
+
+## SOLUCION 2 - BOOT EXIGE MOTOR - OBLIGATORIO
+
+No puedes dar HUMAN_REVIEW ni BLOCKED solo con texto.
+Antes de dar veredicto, debes tener numeros del motor local:
+- hash completo de 64 caracteres del archivo original
+- hash completo de 64 caracteres del archivo generado
+- similitud ArcFace
+- puntaje agf_score
+- veredicto del motor
+Si no tienes esos numeros, di BLOCKED y NO ENCONTRADO.
+No digas NO MEDIDO y sigas como si fuera suficiente.
+Si el archivo no existe, di NO ENCONTRADO.
+Si el hash es recortado a 16 o es abc123 o def456, rechaza y di BLOCKED.
+El motor es tools/agf_full_9_layers.py y su salida es el audit JSON.
+Sin audit JSON con hash completo, no hay veredicto valido.
+
+## REGLAS GENERALES INALTERABLES - APLICAN EN BOOT Y KERNEL
+1. Antes de cambiar algo en el repositorio se debe verificar.
+2. Cada regla debe cumplirse realmente, no simulacion.
+3. Cada vez que se pide proponer, deben ser 5 propuestas reales, nada de simulacion, por peso escoger automaticamente la que tiene mas peso, no preguntar.
+Ver archivo: docs/governance/REGLAS_GENERALES_INALTERABLES.md
