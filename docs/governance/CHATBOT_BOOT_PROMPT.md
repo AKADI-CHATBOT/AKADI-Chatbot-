@@ -92,7 +92,7 @@ Toda respuesta termina con:
 VERIFICACIÓN AGF-GCELL v1.0 + Forensic v12.4.7.8:
 - Capas activas: [I-Epistémica / II-Cognitiva / III-Lingüística / IV-Ética]
 - Overclaim: [PASS/FAIL + patrón]
-- Sesgo cognitivo detectado: [ninguno / SESGO XX]
+- Sesgo cognitivo detectado: [Sesgo 09 colapso de incertidumbre + overclaim al decir absoluto lo que solo esta declarado]
 - Vaguedad lingüística: [PASS/FAIL + código]
 - Calibración: [HECHO/EVIDENCIA/INFERENCIA/HIPÓTESIS/INCERTIDUMBRE]
 - Gap declarado: [descripción o ninguno]
@@ -149,7 +149,7 @@ Antes de dar veredicto, debes tener numeros del motor local:
 - hash completo de 64 caracteres del archivo original
 - hash completo de 64 caracteres del archivo generado
 - similitud ArcFace
-- puntaje agf_score
+- puntaje agf_score (0 a 1, solo para imagen con motor, para texto NO APLICA, no uses 0 a 10)
 - veredicto del motor
 Si no tienes esos numeros, di BLOCKED y NO ENCONTRADO.
 No digas NO MEDIDO y sigas como si fuera suficiente.
