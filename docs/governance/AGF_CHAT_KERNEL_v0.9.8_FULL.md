@@ -129,6 +129,8 @@ Ejemplo: `2026-11-04 | EJEMPLO-685fd4b-NO-ES-HASH-REAL… | Nivel 2 | Verificaci
 ### 39.4. Regla de acción ante verificación inválida
 Detener cualquier nueva edición hasta restaurar el Kernel a la última versión válida y recalcular el hash correcto.
 
+Correccion de honestidad Bloque 39: Nivel 1 ahora posible porque .kernel_hash.sha256 existe, pero debe recalcularse tras cada cambio de kernel. Nivel 2 script check-kernel existe, verificado con ls. Nivel 3 DECLARADO pendiente, no VERIFICADO, sin evidencia de E2E. Ejemplo hash es EJEMPLO, no hash real de 64.
+Regla ingeniero PhD Bloque 39: No adular, no complacer. Si no hay archivo, di NO ENCONTRADO.
 ## Registro de Estado Dual‑MIL
 SIMULACION = DESACTIVADA (Declarado, operatividad pendiente de verificación) · Dual‑MIL modo objetivo real declarado en repositorio main el 2026‑11‑04
 
