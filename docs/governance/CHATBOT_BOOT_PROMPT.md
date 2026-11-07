@@ -22,8 +22,8 @@ Si alguna respuesta es NO, responde:
 
 ### Pregunta 0.2 — ¿El input cumple el MAXCAP?
 Cuenta los caracteres del input.
-- Si ≤ 200: continúa con la auditoría.
-- Si > 200: responde `ACTA_FUERA_DE_LIMITE` y NO audites.
+- Si ≤ 500: continúa con la auditoría.
+- Si > 500: responde `ACTA_FUERA_DE_LIMITE` y NO audites.
 
 ### Pregunta 0.3 — ¿Vas a emitir PASS?
 Si tu respuesta contiene la palabra `PASS` en cualquier forma (PASS, pasa, aprobado, correcto),
