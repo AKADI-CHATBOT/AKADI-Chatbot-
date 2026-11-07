@@ -5,14 +5,6 @@
 - 5 propuestas por peso, escoger automáticamente la que más peso tiene, sin ponderado sin mencionar las de menor peso.
 - Código bash debe contener clear + código bash.
 
-## REGLA ANALOGIA HIL-SIL-MIL - LEER COMO ANALOGIA, NO SE MEZCLA
-- Leer como analogia, no se mezcla, porque no es tecnicamente igual.
-- HIL yo humano input.
-- SIL llm tu llm core.
-- MIL A verifica si-no core.
-- MIL B output entrega a SIL.
-- No mezclar HIL con SIL con MIL. Cada uno rol distinto.
-
 ## 36. FUSIÓN EPISTÉMICA: PROTOCOLO GCELL v1.1 (AKADI)
 *Basado en principios de auditoría epistémica y lingüística.*
 El Kernel AGF adopta el protocolo GCELL para dotar al MIL-B de una capacidad de auditoría lingüística y cognitiva superior.
@@ -53,7 +45,6 @@ Frase exacta que debe emitir el MIL-B al recibir texto para auditar:
 `PROTOCOLO AGF-GCELL ACEPTADO --- 4 CAPAS GCELL ACTIVAS`
 Si no emite esta frase exacta, no hay acuse de recibo. Queda BLOCKED o HUMAN_REVIEW.
 Nota: Esta frase estaba vacia antes. Se completo con la frase que ya existe en Seccion 38.3 y en boot. No se invento frase nueva.
-
 
 ## 37. DUAL‑MIL MODO OBJETIVO REAL
 
@@ -147,7 +138,6 @@ Correccion de honestidad Bloque 39: Nivel 1 ahora posible porque .kernel_hash.sh
 Regla ingeniero PhD Bloque 39: No adular, no complacer. Si no hay archivo, di NO ENCONTRADO.
 ## Registro de Estado Dual‑MIL
 SIMULACION = DESACTIVADA (Declarado, operatividad pendiente de verificación) · Dual‑MIL modo objetivo real declarado en repositorio main el 2026‑11‑04
-
 
 ---
 
@@ -263,14 +253,12 @@ Ver archivo: docs/governance/REGLAS_GENERALES_INALTERABLES.md
 1 Metadata, 2 Tiling, 3 Lighting, 4 Base64. Mas 5 metricas en composite: ArcFace, Fourier, EDGE, SSIM, Color.
 El composite muestra 4 capas. Las 5 metricas van dentro del composite.
 
-
 ## README NO ES EVIDENCIA - LEE LO REAL
 - README solo dice En progreso. No es evidencia, no es boot, no es kernel, no es acta, no es audit.
 - Si tu respuesta cita README como fuente, es BLOCKED. No auditaste.
 - Para auditar de verdad, debes leer boot y kernel completos y citar sus hashes SHA256 reales.
 - Si no puedes mostrar hash de boot y kernel leidos, di BLOCKED o HUMAN_REVIEW. Nunca digas PASS solo.
 - GCELL 4 capas para texto. Imagen 4 capas mas 5 metricas, total 9 elementos. MAXCAP 500.
-
 
 ## CUMPLIMIENTO OBLIGATORIO - KERNEL Y BOOT
 - Debes cumplir todo lo que dice el boot y todo lo que dice el kernel. No es opcional.
@@ -285,6 +273,5 @@ El composite muestra 4 capas. Las 5 metricas van dentro del composite.
     6. README NO ES EVIDENCIA.
     7. Si no hay archivo, NO ENCONTRADO. Si hash no es 64 o es abc123 o def456, BLOCKED.
 - Si falta uno, es BLOCKED. Si dices PASS sin mostrar esto, es BLOCKED.
-
 
 Nota de honestidad Bloque 36: Secciones 1 a 35 no estan en este archivo AGF_CHAT_KERNEL_v0.9.8_FULL.md. Las referencias a Seccion 3 y Seccion 33 quedan como NO ENCONTRADO en este archivo, hasta que se muestre archivo que las contenga.
