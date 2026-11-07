@@ -7,7 +7,7 @@ Reemplaza el orquestador vacío por un motor que hace TODO el trabajo:
 - CAPA 2: Tiling (detección de rostros)
 - CAPA 3: Lighting (consistencia de iluminación)
 - CAPA 4: Base64 Differential (diagnóstico)
-- CAPAS 5-9: Composite Score (ArcFace + Fourier + Shazam + SSIM + Color)
+- CAPAS 5-9: Composite Score (ArcFace + Fourier + EDGE + SSIM + Color)
 
 Genera: termux_sealed/composite_audit.json
 
@@ -30,13 +30,13 @@ OUTPUT_FILE = os.path.join(EVIDENCE_DIR, "composite_audit.json")
 UMBRAL_ARCFACE = float(os.environ.get('AGF_ARCFACE_THRESHOLD', 0.65))  # Umbral por defecto, pendiente de medición FAR/FRR
 UMBRAL_FOURIER = 0.40
 UMBRAL_SSIM = 0.70
-UMBRAL_SHAZAM = 0.50
+UMBRAL_EDGE = 0.50
 
 # Pesos (del README)
 PESOS = {
     "arcface": 0.40,   # 40% - Hard Gate
     "fourier": 0.30,   # 30% - Anti-hallucination
-    "shazam": 0.15,    # 15% - Estructura (era 20%, corregido)
+    "edge": 0.15,    # 15% - Estructura (era 20%, corregido)
     "ssim": 0.10,      # 10% - Similitud
     "color": 0.05      # 5%  - Cromática
 }  # TOTAL: 100%
@@ -162,14 +162,14 @@ def capa_composite(orig_path, gen_path):
     Las 5 capas ponderadas:
     - ArcFace (identidad facial) → 40%
     - Fourier (firma de frecuencia) → 30%
-    - Shazam (bordes) → 20%
+    - EDGE (bordes) → 15%
     - SSIM (píxeles) → 10%
     - Color (huella cromática) → 5%
     """
     metricas = {
         "cosine": 0.0,
         "fourier": 0.0,
-        "shazam": 0.0,
+        "edge": 0.0,
         "ssim": 0.0,
         "color": 0.0,
         "hue_diff": 0.0
@@ -269,7 +269,7 @@ def capa_composite(orig_path, gen_path):
     except Exception as e:
         print(f"[WARN] Fourier falló: {e}")
 
-    # 5. Shazam (bordes) — Canny con OpenCV, fallback con Sobel/PIL
+    # 5. EDGE (bordes) — Canny con OpenCV, fallback con Sobel/PIL
     try:
         import cv2
         import numpy as np
@@ -277,8 +277,8 @@ def capa_composite(orig_path, gen_path):
         if img is not None:
             img = cv2.resize(img, (256, 256))
             edges = cv2.Canny(img, 100, 200)
-            metricas["shazam"] = float(edges.mean() / 255.0)
-            print("[INFO] Shazam: OpenCV Canny")
+            metricas["edge"] = float(edges.mean() / 255.0)
+            print("[INFO] EDGE: OpenCV Canny")
     except ImportError:
         # Fallback: Sobel con PIL + NumPy
         try:
@@ -289,18 +289,18 @@ def capa_composite(orig_path, gen_path):
             # Sobel horizontal y vertical
             sobel_x = np.abs(np.diff(arr, axis=1)).mean()
             sobel_y = np.abs(np.diff(arr, axis=0)).mean()
-            metricas["shazam"] = float((sobel_x + sobel_y) / 255.0)
-            print("[INFO] Shazam: Sobel fallback (sin OpenCV)")
+            metricas["edge"] = float((sobel_x + sobel_y) / 255.0)
+            print("[INFO] EDGE: Sobel fallback (sin OpenCV)")
         except Exception as e:
-            print(f"[WARN] Shazam fallback falló: {e}")
+            print(f"[WARN] EDGE fallback falló: {e}")
     except Exception as e:
-        print(f"[WARN] Shazam falló: {e}")
+        print(f"[WARN] EDGE falló: {e}")
 
     # Calcular score ponderado
     score = (
         metricas["cosine"] * PESOS["arcface"] +
         metricas["fourier"] * PESOS["fourier"] +
-        metricas["shazam"] * PESOS["shazam"] +
+        metricas["edge"] * PESOS["edge"] +
         metricas["ssim"] * PESOS["ssim"] +
         metricas["color"] * PESOS["color"]
     )
@@ -370,14 +370,14 @@ def main():
 
     print("\n⚖️  FASE 3: JUEZ FINAL (Score Ponderado)")
     print("\n" + "="*60)
-    print(" CAPAS 5-9: Composite (ArcFace + Fourier + Shazam + SSIM + Color)")
+    print(" CAPAS 5-9: Composite (ArcFace + Fourier + EDGE + SSIM + Color)")
     print("="*60)
 
     metricas, score, veredicto, razon = capa_composite(orig_path, gen_path)
 
     print(f"\n  [1] Identidad (ArcFace) [40%]: {metricas['cosine']:.4f}")
     print(f"  [2] Firma de Frecuencia [30%]: {metricas['fourier']:.4f}")
-    print(f"  [3] Estructura (Shazam) [15%]: {metricas['shazam']:.4f}")
+    print(f"  [3] Estructura (EDGE) [15%]: {metricas['edge']:.4f}")
     print(f"  [4] Píxeles (SSIM)      [10%]: {metricas['ssim']:.4f}")
     print(f"  [5] Huella Cromática    [ 5%]: {metricas['color']:.4f} (ΔH={metricas['hue_diff']:.1f}°)")
     print(f"\n  🏆 AGF SCORE PONDERADO: {score:.4f}")

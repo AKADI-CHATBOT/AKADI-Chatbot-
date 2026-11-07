@@ -171,7 +171,7 @@ El motor evolucionó de las **4 capas GCELL** (Epistémica, Cognitiva, Lingüís
 **Capas ponderadas (deciden HUMAN_REVIEW/BLOCKED):**
 1. ArcFace (40%)
 2. Fourier 2D (30%)
-3. Shazam (15%)
+3. EDGE por Akai (15%)
 4. SSIM (10%)
 5. Color (5%)
 
@@ -224,7 +224,7 @@ El kernel referencia las siguientes herramientas ejecutables:
 
 | Herramienta | Función | Estado |
 |-------------|---------|--------|
-| `tools/agf_full_9_layers.py` | Motor forense de 9 elementos (4 capas forenses + 5 metricas) (ArcFace, Fourier, Shazam, SSIM, Color + 4 diagnósticas) | ✅ Implementado |
+| `tools/agf_full_9_layers.py` | Motor forense de 9 elementos (4 capas forenses + 5 metricas) (ArcFace, Fourier, EDGE, SSIM, Color + 4 diagnósticas) | ✅ Implementado |
 | `tools/acta_final.py` | Genera el Acta Final firmada con SHA-256 (certificado para el cliente) | ✅ Implementado |
 | `tools/check_kernel.py` | Verifica la integridad del kernel (hash SHA-256) | ✅ Implementado |
 | `tools/auto_auditor.py` | Auditor automático (integración con APIs externas) | ✅ Implementado |
@@ -246,7 +246,7 @@ Si cualquiera de estas herramientas falta, el sistema entra en `BLOCKED`. No pue
 Ver archivo: docs/governance/REGLAS_GENERALES_INALTERABLES.md
 
 ## IMAGEN SON 4 CAPAS MAS 5 METRICAS - TOTAL 9 ELEMENTOS
-1 Metadata, 2 Tiling, 3 Lighting, 4 Base64. Mas 5 metricas en composite: ArcFace, Fourier, Shazam, SSIM, Color.
+1 Metadata, 2 Tiling, 3 Lighting, 4 Base64. Mas 5 metricas en composite: ArcFace, Fourier, EDGE, SSIM, Color.
 El composite muestra 4 capas. Las 5 metricas van dentro del composite.
 
 

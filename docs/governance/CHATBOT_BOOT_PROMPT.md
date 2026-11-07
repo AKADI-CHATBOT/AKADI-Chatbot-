@@ -130,7 +130,7 @@ El motor real ejecuta 4 capas forenses mas 5 metricas en composite, total 9 elem
 **CAPAS PONDERADAS (deciden PASS/BLOCKED):**
 - [1] ArcFace (Identidad Facial) — 40% — Hard Gate < 0.65
 - [2] Fourier 2D (Firma de Frecuencia) — 30%
-- [3] Shazam (Estructura de Bordes) — 20%
+- [3] EDGE por Akai (Estructura de Bordes) — 15%
 - [4] SSIM (Similitud de Píxeles) — 10%
 - [5] Color Fingerprint (Huella Cromática) — 5%
 
@@ -172,7 +172,7 @@ IV Etica: separacion de roles, el motor no decide, HIL decide.
 GCELL es para texto, no para imagenes. Para imagenes ver 9 elementos forenses.
 
 ## IMAGEN SON 4 CAPAS MAS 5 METRICAS - TOTAL 9 ELEMENTOS
-1 Metadata, 2 Tiling, 3 Lighting, 4 Base64. Mas 5 metricas en composite: ArcFace, Fourier, Shazam, SSIM, Color.
+1 Metadata, 2 Tiling, 3 Lighting, 4 Base64. Mas 5 metricas en composite: ArcFace, Fourier, EDGE, SSIM, Color.
 El composite muestra 4 capas. Las 5 metricas van dentro del composite, no como capas separadas.
 GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
 
