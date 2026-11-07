@@ -6,6 +6,12 @@
 - Código bash debe contener clear + código bash.
 - Actualizar hashes, README, commit a main, push. Siempre despues de cambiar Boot o Kernel.
 
+## DEFINICION UNICA SIL MIL HIL - SIN MEZCLAR
+- HIL = humano, operador, valida y decide, no ejecuta codigo.
+- SIL = codigo Python que ejecuta, sin juicio, motor forense, calcula hash.
+- MIL-A = LLM generador.
+- MIL-B = LLM auditor, no ejecuta codigo, no calcula hash, no da PASS.
+
 ## 36. FUSIÓN EPISTÉMICA: PROTOCOLO GCELL v1.1 (AKADI)
 *Basado en principios de auditoría epistémica y lingüística.*
 El Kernel AGF adopta el protocolo GCELL para dotar al MIL-B de una capacidad de auditoría lingüística y cognitiva superior.
@@ -186,10 +192,10 @@ El motor evolucionó de las **4 capas GCELL** (Epistémica, Cognitiva, Lingüís
 8. Lighting
 9. Base64 Differential
 
-Las 4 capas GCELL originales siguen vigentes como **protocolo de auditoría del MIL-B** (el LLM en el chat). Las 4 capas forenses mas 5 metricas son la **implementación real del motor HIL** (Python). Ambas coexisten:
+Las 4 capas GCELL originales siguen vigentes como **protocolo de auditoría del MIL-B** (el LLM en el chat). Las 4 capas forenses mas 5 metricas son la **implementación real del motor SIL** (Python). Ambas coexisten:
 
 - **MIL-B** aplica GCELL (4 capas) para auditar el texto del usuario.
-- **HIL** aplica 4 capas forenses mas 5 metricas para auditar las imágenes.
+- **SIL** aplica 4 capas forenses mas 5 metricas para auditar las imágenes.
 
 No son lo mismo, y no deben confundirse.
 
