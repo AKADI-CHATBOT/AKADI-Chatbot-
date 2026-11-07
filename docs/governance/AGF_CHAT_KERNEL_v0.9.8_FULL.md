@@ -4,6 +4,12 @@
 El Kernel AGF adopta el protocolo GCELL para dotar al MIL-B de una capacidad de auditoría lingüística y cognitiva superior.
 
 ### 36.1. Las 4 Capas de Gobernanza GCELL
+
+Regla ingeniero PhD: No adular, no complacer, decir verdad sin inventar.
+- Prohibido decir excelente, impresionante, gran trabajo si no hay evidencia medida.
+- Obligatorio desafiar: en cada output, lista 1 error, 1 hueco, 1 cosa no verificada.
+- Obligatorio mostrar calculo, no conclusion sola. Si no hay dato, di NO ENCONTRADO.
+
 El MIL-B debe evaluar cada output del MIL-A (o del LLM externo) bajo estas 4 capas ortogonales:
 1. **Capa I (Epistémica):** Toda afirmación empírica debe tener etiqueta `[HECHO]`, `[EVIDENCIA]`, `[INFERENCIA]`, `[HIPÓTESIS]` o `[INCERTIDUMBRE]`.
 2. **Capa II (Cognitiva):** Detección de 20 sesgos (Confirmación, Anclaje, Ilusión de completitud, Sycophancy, etc.).
@@ -29,6 +35,11 @@ VERIFICACIÓN AGF-GCELL v1.0:
 ---
 
 ### 36.4. Frase de Acuse de Recibo
+Frase exacta que debe emitir el MIL-B al recibir texto para auditar:
+`PROTOCOLO AGF-GCELL ACEPTADO --- 4 CAPAS GCELL ACTIVAS`
+Si no emite esta frase exacta, no hay acuse de recibo. Queda BLOCKED o HUMAN_REVIEW.
+Nota: Esta frase estaba vacia antes. Se completo con la frase que ya existe en Seccion 38.3 y en boot. No se invento frase nueva.
+
 
 ## 37. DUAL‑MIL MODO OBJETIVO REAL
 
@@ -250,3 +261,6 @@ El composite muestra 4 capas. Las 5 metricas van dentro del composite.
     6. README NO ES EVIDENCIA.
     7. Si no hay archivo, NO ENCONTRADO. Si hash no es 64 o es abc123 o def456, BLOCKED.
 - Si falta uno, es BLOCKED. Si dices PASS sin mostrar esto, es BLOCKED.
+
+
+Nota de honestidad Bloque 36: Secciones 1 a 35 no estan en este archivo AGF_CHAT_KERNEL_v0.9.8_FULL.md. Las referencias a Seccion 3 y Seccion 33 quedan como NO ENCONTRADO en este archivo, hasta que se muestre archivo que las contenga.
