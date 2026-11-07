@@ -222,3 +222,9 @@ GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
 - PASS-CHECK en README no es veredicto MIL-B. Se renombra a HUMAN_REVIEW-CHECK para evitar confusion.
 - Si MIL-B escribe PASS como veredicto propio, es violacion y queda BLOCKED.
 - Distincion: SIL_PASS es veredicto de motor. MIL-B_VEREDICTO es HUMAN_REVIEW o BLOCKED. Sin mezclar.
+
+## 14. KERNEL v1.4 - INTEGRACION PROPUESTA APROBADA POR HIL - 2026-11-07
+- Kernel v1.4 integra propuesta de secciones faltantes aprobada por HIL.
+- Secciones 1 a 35, Seccion 3, Seccion 33, Nodo 10, Regla I-01 quedan como INTEGRADAS PROPUESTA, DECLARADO, no como originales recuperados.
+- Ver Kernel seccion 46. Archivo propuesta original: docs/governance/PROPUESTA_SECCIONES_FALTANTES.md.
+- README NO ES EVIDENCIA.
