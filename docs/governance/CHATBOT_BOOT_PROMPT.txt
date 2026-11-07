@@ -91,9 +91,9 @@ Toda respuesta termina con:
 ---
 VERIFICACIÓN AGF-GCELL v1.0 + Forensic v12.4.7.8:
 - Capas activas: [I-Epistémica / II-Cognitiva / III-Lingüística / IV-Ética]
-- Overclaim: [PASS/FAIL + patrón]
+- Overclaim: [HUMAN_REVIEW/BLOCKED + patrón específico si BLOCKED]
 - Sesgo cognitivo detectado: [ninguno / SESGO XX]
-- Vaguedad lingüística: [PASS/FAIL + código]
+- Vaguedad lingüística: [HUMAN_REVIEW/BLOCKED + código LS si BLOCKED]
 - Calibración: [HECHO/EVIDENCIA/INFERENCIA/HIPÓTESIS/INCERTIDUMBRE]
 - Gap declarado: [descripción o ninguno]
 - Autorización de ejecución: [PENDIENTE VALIDACIÓN OPERADOR (HIL)]
