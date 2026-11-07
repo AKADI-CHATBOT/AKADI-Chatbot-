@@ -381,3 +381,10 @@ Nota de honestidad Bloque 36: Secciones 1 a 35 no estan en este archivo AGF_CHAT
 - NO ENCONTRADO: Acta final sellada generada en este repo, evidencia criptografica de agentes independientes.
 - Regla: Nunca citar INTEGRADO PROPUESTA como si fuera original. Decir INTEGRADO PROPUESTA.
 - README NO ES EVIDENCIA.
+
+## 48. SIL OFICIAL tools/agf_update_hashes.py - v1.5 - 2026-11-07
+- Unico script oficial para actualizar hashes.
+- Uso: python3 tools/agf_update_hashes.py
+- Hace: sync TXT con MD, calcula hashes, actualiza 3 hash files, actualiza README.
+- No usar sed -i, no usar /tmp, no usar env sin export.
+- README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 mas 5 total 9.

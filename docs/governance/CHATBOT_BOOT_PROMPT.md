@@ -228,3 +228,10 @@ GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
 - Secciones 1 a 35, Seccion 3, Seccion 33, Nodo 10, Regla I-01 quedan como INTEGRADAS PROPUESTA, DECLARADO, no como originales recuperados.
 - Ver Kernel seccion 46. Archivo propuesta original: docs/governance/PROPUESTA_SECCIONES_FALTANTES.md.
 - README NO ES EVIDENCIA.
+
+## 15. SIL OFICIAL tools/agf_update_hashes.py - v1.5 - 2026-11-07
+- Unico script oficial para actualizar hashes, README y TXT.
+- Uso: python3 tools/agf_update_hashes.py
+- No usar sed -i en Termux, no usar /tmp, no usar variables de entorno sin export.
+- SIL calcula hashes, MIL-B solo cita, HIL valida y decide.
+- Si el script dice AVISO, detener y revisar antes de commit.
