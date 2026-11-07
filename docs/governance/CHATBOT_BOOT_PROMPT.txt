@@ -175,3 +175,11 @@ GCELL es para texto, no para imagenes. Para imagenes ver 9 elementos forenses.
 1 Metadata, 2 Tiling, 3 Lighting, 4 Base64. Mas 5 metricas en composite: ArcFace, Fourier, Shazam, SSIM, Color.
 El composite muestra 4 capas. Las 5 metricas van dentro del composite, no como capas separadas.
 GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
+
+
+## README NO ES EVIDENCIA - LEE LO REAL
+- README solo dice En progreso. No es evidencia, no es boot, no es kernel, no es acta, no es audit.
+- Si tu respuesta cita README como fuente, es BLOCKED. No auditaste.
+- Para auditar de verdad, debes leer boot y kernel completos y citar sus hashes SHA256 reales.
+- Si no puedes mostrar hash de boot y kernel leidos, di BLOCKED o HUMAN_REVIEW. Nunca digas PASS solo.
+- GCELL 4 capas para texto. Imagen 4 capas mas 5 metricas, total 9 elementos. MAXCAP 500.

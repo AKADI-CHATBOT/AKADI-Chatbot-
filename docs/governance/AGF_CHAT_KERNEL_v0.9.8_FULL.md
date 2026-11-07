@@ -228,3 +228,11 @@ Ver archivo: docs/governance/REGLAS_GENERALES_INALTERABLES.md
 ## IMAGEN SON 4 CAPAS MAS 5 METRICAS - TOTAL 9 ELEMENTOS
 1 Metadata, 2 Tiling, 3 Lighting, 4 Base64. Mas 5 metricas en composite: ArcFace, Fourier, Shazam, SSIM, Color.
 El composite muestra 4 capas. Las 5 metricas van dentro del composite.
+
+
+## README NO ES EVIDENCIA - LEE LO REAL
+- README solo dice En progreso. No es evidencia, no es boot, no es kernel, no es acta, no es audit.
+- Si tu respuesta cita README como fuente, es BLOCKED. No auditaste.
+- Para auditar de verdad, debes leer boot y kernel completos y citar sus hashes SHA256 reales.
+- Si no puedes mostrar hash de boot y kernel leidos, di BLOCKED o HUMAN_REVIEW. Nunca digas PASS solo.
+- GCELL 4 capas para texto. Imagen 4 capas mas 5 metricas, total 9 elementos. MAXCAP 500.
