@@ -76,3 +76,4 @@ arcface.onnx
 # Backups locales (no subir a Git)
 *.bak
 *.bak.*
+PAQUETE_COMPLETO_v1.5.md
