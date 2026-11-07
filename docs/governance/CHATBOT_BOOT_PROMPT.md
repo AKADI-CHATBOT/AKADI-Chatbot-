@@ -130,7 +130,7 @@ El motor real ejecuta 4 capas forenses mas 5 metricas en composite, total 9 elem
 **CAPAS PONDERADAS (deciden PASS/BLOCKED):**
 - [1] ArcFace (Identidad Facial) — 40% — Hard Gate < 0.65
 - [2] Fourier 2D (Firma de Frecuencia) — 30%
-- [3] EDGE por Akai (Estructura de Bordes) — 15%
+- [3] EDGE por akai2 (Estructura de Bordes) — 15%
 - [4] SSIM (Similitud de Píxeles) — 10%
 - [5] Color Fingerprint (Huella Cromática) — 5%
 

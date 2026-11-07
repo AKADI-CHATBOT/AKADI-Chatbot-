@@ -171,7 +171,7 @@ El motor evolucionó de las **4 capas GCELL** (Epistémica, Cognitiva, Lingüís
 **Capas ponderadas (deciden HUMAN_REVIEW/BLOCKED):**
 1. ArcFace (40%)
 2. Fourier 2D (30%)
-3. EDGE por Akai (15%)
+3. EDGE por akai2 (15%)
 4. SSIM (10%)
 5. Color (5%)
 
