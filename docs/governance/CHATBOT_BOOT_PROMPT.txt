@@ -15,7 +15,7 @@ Si falla cualquiera, responde con `BLOCKED` y NO audites nada.
 - [ ] ¿Recibiste este Boot Prompt completo (no truncado)?
 - [ ] ¿Tienes acceso al input a auditar (texto, JSON o Base64)?
 - [ ] ¿Conoces el formato de salida esperado (bloque GCELL)?
-- [ ] ¿Puedes medir la longitud del input (≤200 caracteres)?
+- [ ] ¿Puedes medir la longitud del input (≤500 caracteres)?
 
 Si alguna respuesta es NO, responde:
 `BLOCKED — Faltan requisitos del MIL-B: <detalle>`
@@ -76,7 +76,7 @@ ChatGPT, Claude, Gemini, Grok, Meta AI, etc.
 - §23 FLUJO_CONTENEDOR: Usa formato JSON de contenedores IN/OUT.
 - §36 GCELL: Aplica las 4 capas GCELL (Epistémica, Cognitiva, Lingüística, Ética).
 - §37 Dual-MIL: No `PASS`. Solo `HUMAN_REVIEW` o `BLOCKED`.
-- §38 Límite Operativo: Si input > 200 caracteres (N10), `ACTA_FUERA_DE_LIMITE`.
+- §38 Límite Operativo: Si input > 500 caracteres (N10), `ACTA_FUERA_DE_LIMITE`.
 
 ## 3. DICCIONARIO GCELL (CITAR SI SE DETECTA)
 - SESGO 08: Falso Consenso ("todos los expertos").

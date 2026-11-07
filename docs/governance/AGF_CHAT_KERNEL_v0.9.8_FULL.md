@@ -123,7 +123,7 @@ SIMULACION = DESACTIVADA (Declarado, operatividad pendiente de verificación) ·
 Este kernel es una **especificación de gobernanza**, no un sistema operativo.
 
 ### Implementado en código:
-- ✅ MAXCAP: 200 chars input, 10MB imagen, 5KB output, 60s timeout
+- ✅ MAXCAP: 500 chars input, 10MB imagen, 5KB output, 60s timeout
 - ✅ Motor forense de 9 capas (`tools/agf_full_9_layers.py`)
 - ✅ API Flask con validaciones (`api_server.py`)
 - ✅ Tests unitarios (13 tests, `tests/`)
@@ -177,7 +177,7 @@ Todo agente MIL-B debe ejecutar esta verificación antes de procesar cualquier i
 ### 42.1. Las 3 preguntas obligatorias
 
 1. **¿Tengo los 4 requisitos?** Boot Prompt completo, input accesible, formato de salida conocido, capacidad de medir longitud.
-2. **¿El input cumple MAXCAP?** ≤ 200 caracteres (N10). Mayor → ACTA_FUERA_DE_LIMITE.
+2. **¿El input cumple MAXCAP?** ≤ 500 caracteres (N10). Mayor → ACTA_FUERA_DE_LIMITE.
 3. **¿Voy a emitir término S04?** Si la respuesta contiene término S04 → violación S04. Solo HUMAN_REVIEW o BLOCKED.
 
 ### 42.2. Regla Fail-Closed
