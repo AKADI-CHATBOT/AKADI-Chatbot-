@@ -144,9 +144,9 @@ Este kernel es una **especificación de gobernanza**, no un sistema operativo.
 
 ---
 
-## 41. ACTUALIZACIÓN v12.4.7.8-STRONG — 9 CAPAS FORENSES
+## 41. ACTUALIZACIÓN v12.4.7.8-STRONG — 4 CAPAS FORENSES MAS 5 METRICAS - TOTAL 9 ELEMENTOS
 
-El motor evolucionó de las **4 capas GCELL** (Epistémica, Cognitiva, Lingüística, Ética) a las **9 capas forenses** del motor `agf_full_9_layers.py`:
+El motor evolucionó de las **4 capas GCELL** (Epistémica, Cognitiva, Lingüística, Ética) a las **4 capas forenses mas 5 metricas** del motor `agf_full_9_layers.py`:
 
 **Capas ponderadas (deciden HUMAN_REVIEW/BLOCKED):**
 1. ArcFace (40%)
@@ -161,10 +161,10 @@ El motor evolucionó de las **4 capas GCELL** (Epistémica, Cognitiva, Lingüís
 8. Lighting
 9. Base64 Differential
 
-Las 4 capas GCELL originales siguen vigentes como **protocolo de auditoría del MIL-B** (el LLM en el chat). Las 9 capas forenses son la **implementación real del motor HIL** (Python). Ambas coexisten:
+Las 4 capas GCELL originales siguen vigentes como **protocolo de auditoría del MIL-B** (el LLM en el chat). Las 4 capas forenses mas 5 metricas son la **implementación real del motor HIL** (Python). Ambas coexisten:
 
 - **MIL-B** aplica GCELL (4 capas) para auditar el texto del usuario.
-- **HIL** aplica 9 capas forenses para auditar las imágenes.
+- **HIL** aplica 4 capas forenses mas 5 metricas para auditar las imágenes.
 
 No son lo mismo, y no deben confundirse.
 
@@ -224,3 +224,7 @@ Si cualquiera de estas herramientas falta, el sistema entra en `BLOCKED`. No pue
 2. Cada regla debe cumplirse realmente, no simulacion.
 3. Cada vez que se pide proponer, deben ser 5 propuestas reales, nada de simulacion, por peso escoger automaticamente la que tiene mas peso, no preguntar.
 Ver archivo: docs/governance/REGLAS_GENERALES_INALTERABLES.md
+
+## IMAGEN SON 4 CAPAS MAS 5 METRICAS - TOTAL 9 ELEMENTOS
+1 Metadata, 2 Tiling, 3 Lighting, 4 Base64. Mas 5 metricas en composite: ArcFace, Fourier, Shazam, SSIM, Color.
+El composite muestra 4 capas. Las 5 metricas van dentro del composite.

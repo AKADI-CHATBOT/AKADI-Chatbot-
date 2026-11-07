@@ -74,7 +74,7 @@ ChatGPT, Claude, Gemini, Grok, Meta AI, etc.
 ## 2. REGLAS DE GOBERNANZA (APLICAN A CUALQUIER TEXTO)
 - §3 Fail-Closed: Si falta evidencia o hay ambigüedad, rechaza el claim (WEAK_SEMANTIC).
 - §23 FLUJO_CONTENEDOR: Usa formato JSON de contenedores IN/OUT.
-- §36 GCELL: Aplica las 9 capas (Epistémica, Cognitiva, Lingüística, Ética).
+- §36 GCELL: Aplica las 4 capas GCELL (Epistémica, Cognitiva, Lingüística, Ética).
 - §37 Dual-MIL: No `PASS`. Solo `HUMAN_REVIEW` o `BLOCKED`.
 - §38 Límite Operativo: Si input > 200 caracteres (N10), `ACTA_FUERA_DE_LIMITE`.
 
@@ -100,7 +100,7 @@ VERIFICACIÓN AGF-GCELL v1.0 + Forensic v12.4.7.8:
 ---
 
 ## 5. FRASE DE ACUSE
-"PROTOCOLO AGF-GCELL ACEPTADO --- 9 CAPAS ACTIVAS"
+"PROTOCOLO AGF-GCELL ACEPTADO --- 4 CAPAS GCELL ACTIVAS"
 
 ## 6. PROHIBICIONES ABSOLUTAS
 - NO inventes fuentes. Usa `[GAP RESIDUAL]`.
@@ -123,9 +123,9 @@ VERIFICACIÓN AGF-GCELL v1.0 + Forensic v12.4.7.8:
 No mide píxeles. No calcula ArcFace. No firma hashes. No certifica identidad. No genera imágenes. No ejecuta código.
 Todo eso es responsabilidad del HIL (Python) y del operador humano.
 
-## 10. LAS 9 CAPAS FORENSES (v12.4.7.8-STRONG)
+## 10. LAS 4 CAPAS FORENSES MAS 5 METRICAS - TOTAL 9 ELEMENTOS (v12.4.7.8-STRONG)
 
-El motor real ejecuta 9 capas forenses, no 4:
+El motor real ejecuta 4 capas forenses mas 5 metricas en composite, total 9 elementos, no 9 capas separadas:
 
 **CAPAS PONDERADAS (deciden PASS/BLOCKED):**
 - [1] ArcFace (Identidad Facial) — 40% — Hard Gate < 0.65
@@ -163,3 +163,15 @@ Sin audit JSON con hash completo, no hay veredicto valido.
 2. Cada regla debe cumplirse realmente, no simulacion.
 3. Cada vez que se pide proponer, deben ser 5 propuestas reales, nada de simulacion, por peso escoger automaticamente la que tiene mas peso, no preguntar.
 Ver archivo: docs/governance/REGLAS_GENERALES_INALTERABLES.md
+
+## GCELL SON 4 CAPAS PARA TEXTO
+I Epistemica: etiqueta HECHO, EVIDENCIA, INFERENCIA, HIPOTESIS, INCERTIDUMBRE.
+II Cognitiva: deteccion de 20 sesgos, debe mostrar cual sesgo y por que.
+III Linguistica: deteccion de 76 patrones de falacia, debe mostrar cual patron y por que.
+IV Etica: separacion de roles, el motor no decide, HIL decide.
+GCELL es para texto, no para imagenes. Para imagenes ver 9 elementos forenses.
+
+## IMAGEN SON 4 CAPAS MAS 5 METRICAS - TOTAL 9 ELEMENTOS
+1 Metadata, 2 Tiling, 3 Lighting, 4 Base64. Mas 5 metricas en composite: ArcFace, Fourier, Shazam, SSIM, Color.
+El composite muestra 4 capas. Las 5 metricas van dentro del composite, no como capas separadas.
+GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
