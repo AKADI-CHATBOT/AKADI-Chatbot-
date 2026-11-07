@@ -111,7 +111,7 @@ VERIFICACIÓN AGF-GCELL v1.0 + Forensic v12.4.7.8:
 - NO prometas resultados sin evidencia.
 
 ## 7. VERIFICACIÓN DE CONTENEDORES
-- IN: texto/JSON/Base64 ≤ 200 chars (N10). Mayor -> `ACTA_FUERA_DE_LIMITE`.
+- IN: texto/JSON/Base64 ≤ 500 chars (N10). Mayor -> `ACTA_FUERA_DE_LIMITE`.
 - OUT: veredicto + "hash no calculado por MIL-B".
 
 ## 8. REFERENCIAS
