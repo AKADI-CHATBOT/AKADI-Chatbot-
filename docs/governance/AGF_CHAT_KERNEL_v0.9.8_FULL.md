@@ -104,7 +104,7 @@ Regla ingeniero PhD Bloque 38: No adular, no complacer. Ventajas sin medicion so
 ## 39. VERIFICACIÓN DEL ESTADO DEL KERNEL
 
 ### 39.1. Objetivo
-Confirmar que cada estado del Kernel cumple la Regla I-01 antes de considerarlo un estado base válido, independientemente de que exista firma oficial o commit Git.
+Confirmar que cada estado del Kernel cumple la Regla I-01 antes de considerarlo un estado base válido, independientemente de que exista firma oficial o commit Git. [Regla I-01 NO DEFINIDA en este archivo, queda NO ENCONTRADO, secciones 1 a 35 NO ENCONTRADO]
 
 ### 39.2. Niveles de verificación
 
@@ -122,9 +122,9 @@ Confirmar que cada estado del Kernel cumple la Regla I-01 antes de considerarlo 
 - Enviar el hash Nivel 1 al dispositivo móvil
 - Validar (Reed-Solomon corrección + firma criptográfica cuando se requiera aprobación oficial)
 
-### 39.3. Registro obligatorio tras verificación válida
+### 39.3. Registro obligatorio tras verificación válida [Registro NO ENCONTRADO sin archivo, no hay archivo de registro que lo pruebe]
 Guardar en registro local: Fecha + Hash + Nivel alcanzado + Nombre verificador.
-Ejemplo: `2026-11-04 | 685fd4b… | Nivel 2 | Verificación local completa`
+Ejemplo: `2026-11-04 | EJEMPLO-685fd4b-NO-ES-HASH-REAL… | Nivel 2 | Verificación local completa`
 
 ### 39.4. Regla de acción ante verificación inválida
 Detener cualquier nueva edición hasta restaurar el Kernel a la última versión válida y recalcular el hash correcto.
