@@ -64,12 +64,13 @@ Como Motor de Inferencia Lógica (MIL‑B) operando conjuntamente con el
 
 | Dimensión de Análisis | Kernel AGF (AGF‑GCELL v1.0) | RLHF Tradicional | Constitutional AI (CAI) | Guardrails de Perímetro (Llama Guard como ejemplo) |
 |---|---|---|---|---|
-| Paradigma de Decisión | Fail‑Closed absoluto (rechazo ante ausencia de evidencia o riesgo de sesgo/vaguedad) [Sección 3] | Probabilístico / basado en preferencias de recompensa humana (sujeto a suavizado de alineación) | Basado en principios constitucionales evaluados por el propio modelo o crítico auxiliar | Clasificación binaria o categórica de entradas/salidas en el perímetro del sistema |
+| Paradigma de Decisión | Fail‑Closed DECLARADO, no verificado en LLM externo (solo wrapper externo en Python es determinista) (rechazo ante ausencia de evidencia o riesgo de sesgo/vaguedad) [Sección 3] | Probabilístico / basado en preferencias de recompensa humana (sujeto a suavizado de alineación) | Basado en principios constitucionales evaluados por el propio modelo o crítico auxiliar | Clasificación binaria o categórica de entradas/salidas en el perímetro del sistema |
 | Estructura de Auditoría | Dual‑MIL (estado anterior: simulación paralela MIL‑A / MIL‑B; estado actual: modo objetivo‑real declarado) con 4 capas estrictas (Epistémica, Cognitiva, Lingüística, Ética) [Sección 33 & 36 & 37] | Único flujo de inferencia optimizado por recompensa; auditoría posterior basada en métricas de desalineación o red teaming | Doble fase (autocrítica basada en constitución + revisión por RL). Sin separación formal de motores lógicos paralelos durante la inferencia | Motor clasificador externo o modelo secundario de moderación desacoplado del núcleo de generación |
-| Control Overclaims y Sesgos | Determinista y explícito, citando un diccionario normativo obligatorio (ej. LS‑01, Sesgo 08, Sesgo 19) | Implícito en penalización de alucinaciones durante la recompensa (RLHF/RLAIF) | Mitigación orientada a reducir daños, sesgos políticos y contenidos tóxicos mediante principios generales | Filtrado heurístico o basado en patrones de expresiones prohibidas; sin análisis epistémico profundo por aserción |
+| Control Overclaims y Sesgos | Texto que PIDE determinismo, no codigo determinista en LLM y explícito, citando un diccionario normativo obligatorio (ej. LS‑01, Sesgo 08, Sesgo 19) | Implícito en penalización de alucinaciones durante la recompensa (RLHF/RLAIF) | Mitigación orientada a reducir daños, sesgos políticos y contenidos tóxicos mediante principios generales | Filtrado heurístico o basado en patrones de expresiones prohibidas; sin análisis epistémico profundo por aserción |
 | Trazabilidad y Evidencia | Requerimiento estricto de calibración epistémica (HECHO / EVIDENCIA / INFERENCIA / HIPÓTESIS) + declaración explícita de Gaps [Sección 3] | Oculta tras pesos neuronales y puntajes continuos de recompensa; baja interpretabilidad granular por token | Trazabilidad basada en la justificación del principio constitucional invocado en la autocrítica | Registros binarios de bloqueo (Safe / Unsafe) con etiquetas predefinidas de categoría |
 
 ### 38.2 Evaluación Crítica de Ventajas y Limitaciones
+Regla ingeniero PhD Bloque 38: No adular, no complacer. Ventajas sin medicion son INFERENCIA, no EVIDENCIA. Limitacion principal: no puede obligar a chatbot externo a cumplir exactamente, solo puede detectar cuando no cumple.
 
 #### A. Kernel AGF (AGF‑GCELL v1.0)
 ✅ Ventajas
@@ -93,12 +94,12 @@ Como Motor de Inferencia Lógica (MIL‑B) operando conjuntamente con el
 ### 38.3 VERIFICACIÓN AGF‑GCELL v1.0
 - Capas activas: [I‑Epistémica / II‑Cognitiva / III‑Lingüística / IV‑Ética]
 - Overclaim: [HUMAN_REVIEW]
-- Sesgo cognitivo detectado: [ninguno]
+- Sesgo cognitivo detectado: [Sesgo 09 colapso de incertidumbre + overclaim al decir absoluto lo que solo esta declarado]
 - Vaguedad lingüística: [HUMAN_REVIEW]
-- Calibración: [EVIDENCIA]
-- Gap declarado: [ninguno]
+- Calibración: [INFERENCIA, no EVIDENCIA, tabla sin mediciones ni citas]
+- Gap declarado: [Secciones 1 a 35 NO ENCONTRADO, Seccion 33 NO ENCONTRADO, Nodo 10 NO ENCONTRADO, sin mediciones de RLHF CAI Guardrails]
 - Autorización de ejecución: [PENDIENTE VALIDACIÓN OPERADOR (HIL)]
-"PROTOCOLO AGF-GCELL ACEPTADO --- 4 CAPAS ACTIVAS"
+"PROTOCOLO AGF-GCELL ACEPTADO --- 4 CAPAS GCELL ACTIVAS"
 
 ## 39. VERIFICACIÓN DEL ESTADO DEL KERNEL
 
