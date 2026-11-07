@@ -47,6 +47,11 @@ El Kernel AGF establece que el protocolo Dual‑MIL (MIL‑A Generador /
 
 *Gobernanza: Esta Sección 37 reemplaza la simulación del Nodo 10 Nativo (Sección 33) para operaciones críticas.*
 Cuando el MIL-B reciba un texto para auditar, debe confirmar con la frase exacta:
+`PROTOCOLO AGF-GCELL ACEPTADO --- 4 CAPAS GCELL ACTIVAS`
+Nota: Esta frase estaba vacia antes. Se completo con la frase exacta que ya existe en Seccion 36.4 y en boot. No se invento frase nueva.
+Correccion de honestidad: Dual-MIL esta DECLARADO en modo objetivo real, no VERIFICADO como operando con agentes independientes. Operatividad pendiente de verificacion. No hay en este archivo evidencia criptografica de agentes independientes. Hasta que haya archivo que lo pruebe, queda DECLARADO, no VERIFICADO.
+Seccion 33 y Nodo 10 Nativo no estan en este archivo. Quedan NO ENCONTRADO en este archivo.
+Regla ingeniero PhD: No adular, no complacer, decir verdad sin inventar. Si no hay evidencia, di NO ENCONTRADO.
 
 ## 38. MARCO DE ANÁLISIS COMPARATIVO (DUAL‑MIL)
 
