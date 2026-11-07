@@ -5,6 +5,14 @@
 - 5 propuestas por peso, escoger automáticamente la que más peso tiene, sin ponderado sin mencionar las de menor peso.
 - Código bash debe contener clear + código bash.
 
+## REGLA ANALOGIA HIL-SIL-MIL - LEER COMO ANALOGIA, NO SE MEZCLA
+- Leer como analogia, no se mezcla, porque no es tecnicamente igual.
+- HIL yo humano input.
+- SIL llm tu llm core.
+- MIL A verifica si-no core.
+- MIL B output entrega a SIL.
+- No mezclar HIL con SIL con MIL. Cada uno rol distinto.
+
 ## 36. FUSIÓN EPISTÉMICA: PROTOCOLO GCELL v1.1 (AKADI)
 *Basado en principios de auditoría epistémica y lingüística.*
 El Kernel AGF adopta el protocolo GCELL para dotar al MIL-B de una capacidad de auditoría lingüística y cognitiva superior.
