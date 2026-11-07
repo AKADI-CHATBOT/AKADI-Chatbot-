@@ -282,3 +282,11 @@ El composite muestra 4 capas. Las 5 metricas van dentro del composite.
 - Si falta uno, es BLOCKED. Si dices PASS sin mostrar esto, es BLOCKED.
 
 Nota de honestidad Bloque 36: Secciones 1 a 35 no estan en este archivo AGF_CHAT_KERNEL_v0.9.8_FULL.md. Las referencias a Seccion 3 y Seccion 33 quedan como NO ENCONTRADO en este archivo, hasta que se muestre archivo que las contenga.
+
+## 44. ACLARACION MAXCAP Y CONTRATO SIL - v1.1 - 2026-11-07
+- MAXCAP 500 aplica SOLO al input a auditar (IN). No aplica al Boot ni al Kernel.
+- GCELL 4 capas para texto. Imagen 4 capas mas 5 metricas, total 9 elementos. Sin mezclar.
+- SIL calcula hashes y entrega JSON con boot_hash, kernel_hash, input_len, input_hash.
+- MIL-B cita JSON, no calcula. HIL decide.
+- Dual-MIL sigue DECLARADO, no VERIFICADO, hasta que haya acta con JSON de SIL.
+- README NO ES EVIDENCIA.

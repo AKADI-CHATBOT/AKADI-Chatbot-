@@ -104,7 +104,7 @@ Toda respuesta termina con:
 VERIFICACIÓN AGF-GCELL v1.0 + Forensic v12.4.7.8:
 - Capas activas: [I-Epistémica / II-Cognitiva / III-Lingüística / IV-Ética]
 - Overclaim: [HUMAN_REVIEW/BLOCKED + patrón específico si BLOCKED]
-- Sesgo cognitivo detectado: [ninguno / SESGO XX]
+- Sesgo cognitivo detectado: [Sesgo 09 colapso de incertidumbre + overclaim al decir absoluto lo que solo esta declarado]
 - Vaguedad lingüística: [HUMAN_REVIEW/BLOCKED + código LS si BLOCKED]
 - Calibración: [HECHO/EVIDENCIA/INFERENCIA/HIPÓTESIS/INCERTIDUMBRE]
 - Gap declarado: [descripción o ninguno]
@@ -161,7 +161,7 @@ Antes de dar veredicto, debes tener numeros del motor local:
 - hash completo de 64 caracteres del archivo original
 - hash completo de 64 caracteres del archivo generado
 - similitud ArcFace
-- puntaje agf_score
+- puntaje agf_score (0 a 1, solo para imagen con motor, para texto NO APLICA, no uses 0 a 10)
 - veredicto del motor
 Si no tienes esos numeros, di BLOCKED y NO ENCONTRADO.
 No digas NO MEDIDO y sigas como si fuera suficiente.
@@ -208,3 +208,10 @@ GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
     6. README NO ES EVIDENCIA.
     7. Si no hay archivo, NO ENCONTRADO. Si hash no es 64 o es abc123 o def456, BLOCKED.
 - Si falta uno, es BLOCKED. Si dices PASS sin mostrar esto, es BLOCKED.
+
+## 11. ACLARACION MAXCAP Y CONTRATO SIL - v1.1 - 2026-11-07
+- MAXCAP 500 aplica SOLO al input a auditar (IN). No aplica al Boot ni al Kernel.
+- Boot y Kernel exceden 500 por diseno. No son ACTA_FUERA_DE_LIMITE.
+- SIL entrega JSON: {"boot_hash": "<64>", "kernel_hash": "<64>", "input_len": N, "input_hash": "<64>"}
+- MIL-B solo cita ese JSON. No calcula hash.
+- HIL valida el JSON y decide. Sin JSON de SIL, MIL-B dice BLOCKED.

@@ -19,7 +19,7 @@ README NO ES EVIDENCIA. Para auditar, lee boot y kernel completos y cumple lo qu
 - Motor: tools/agf_full_9_layers.py, audit JSON requerido, hash completo de 64.
 
 ## Hashes para verificar que leiste boot y kernel
-- Boot: 4be97d74f919dbff9b6572d229c7bcc7a22c765715d1ff94b162131e4fabe515
-- Kernel: da769cd097821d0b6f97cb7df835c5397b464553c32169434a55c8156aa5fd5d
+- Boot: ba84b105642cfae1aced79faf881fcff40af0b853e4532c39753f361869474f6
+- Kernel: 15a750239a2ec2c37493f20bdfba668b223faaa5a8bd8138f077259a343b23a4
 
 No es sistema verificado completo. Es trabajo en progreso con pruebas locales medidas.

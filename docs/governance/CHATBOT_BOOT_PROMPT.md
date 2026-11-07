@@ -208,3 +208,10 @@ GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
     6. README NO ES EVIDENCIA.
     7. Si no hay archivo, NO ENCONTRADO. Si hash no es 64 o es abc123 o def456, BLOCKED.
 - Si falta uno, es BLOCKED. Si dices PASS sin mostrar esto, es BLOCKED.
+
+## 11. ACLARACION MAXCAP Y CONTRATO SIL - v1.1 - 2026-11-07
+- MAXCAP 500 aplica SOLO al input a auditar (IN). No aplica al Boot ni al Kernel.
+- Boot y Kernel exceden 500 por diseno. No son ACTA_FUERA_DE_LIMITE.
+- SIL entrega JSON: {"boot_hash": "<64>", "kernel_hash": "<64>", "input_len": N, "input_hash": "<64>"}
+- MIL-B solo cita ese JSON. No calcula hash.
+- HIL valida el JSON y decide. Sin JSON de SIL, MIL-B dice BLOCKED.
