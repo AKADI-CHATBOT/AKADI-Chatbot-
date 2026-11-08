@@ -1,6 +1,6 @@
 # HANDOFF A OTRO CHATBOT - AGF-GCELL v1.5 - 2026-11-07
 - Repo: AKADI_ec, rama main
-- Commit actual: ac12dab
+- Commit actual: a01343d
 - Boot: [STRIPPED 65 bytes] Kernel: c244439962fa358dd31f863608b5c8941511bb3ffa3b43d91dcefc602329df01
 - Estado: v1.5 SIL OFICIAL tools/agf_update_hashes.py
 - README NO ES EVIDENCIA. Para auditar, lee Boot y Kernel completos.
