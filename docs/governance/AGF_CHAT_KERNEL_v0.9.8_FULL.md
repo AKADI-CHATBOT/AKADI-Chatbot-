@@ -388,3 +388,15 @@ Nota de honestidad Bloque 36: Secciones 1 a 35 no estan en este archivo AGF_CHAT
 - Hace: sync TXT con MD, calcula hashes, actualiza 3 hash files, actualiza README.
 - No usar sed -i, no usar /tmp, no usar env sin export.
 - README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 mas 5 total 9.
+
+## 49. CIRCUITO CERRADO AGF v1.6 - 2026-11-07
+- Circuito: Yo input -> tu output -> yo input otro chatbot -> otro chatbot output -> yo input -> tu output
+- Cierre en C6, peso 10, decide HIL. Sin C6, circuito abierto, no se publica.
+- Sin Termux en el loop, solo HIL como cable. Sin API.
+- Chunk = cada input/output. Cada Chunk tiene: Chunk ID C1-C6, Circuito ID, Nodo origen -> destino, Peso declarado por HIL, Longitud, Hash SHA-256 por SIL, Timestamp, Estado.
+- Nodo de Circuito operativo: HIL, Chatbot 1, Chatbot 2 MIL-B. Nodos judiciales y Nodo 10 quedan como ANALOGIA HISTORICA, NO OPERATIVA, NO SE VERIFICA. Era analogia de quien dicta sentencia, no nodo real.
+- Peso Chunks: C1=1, C2=3, C3=3, C4=5, C5=2, C6=10, Total 24. Peso lo declara HIL.
+- Peso propuestas: MIL-B propone pesos y muestra tabla con las 5. HIL asigna peso final y elige. Nunca solo mayor peso sin mostrar otras 4. Regla vieja de auto-seleccion sin mencionar queda DEPRECADA, no vigente.
+- Regla de ruptura: Si hash no coincide, o peso no lo declaro HIL, o Nodo no es el declarado, circuito BLOCKED, se detiene, no se publica, se vuelve a C1.
+- Estado: Por Chunk PENDIENTE / HUMAN_REVIEW / BLOCKED. Por Circuito CERRADO APROBADO / CERRADO BLOQUEADO / ABIERTO.
+- README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 mas 5 total 9.

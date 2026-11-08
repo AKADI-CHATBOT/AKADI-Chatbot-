@@ -235,3 +235,14 @@ GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
 - No usar sed -i en Termux, no usar /tmp, no usar variables de entorno sin export.
 - SIL calcula hashes, MIL-B solo cita, HIL valida y decide.
 - Si el script dice AVISO, detener y revisar antes de commit.
+
+## 16. CIRCUITO CERRADO AGF v1.6 - 2026-11-07
+- Circuito: Yo input -> tu output -> yo input otro chatbot -> otro chatbot output -> yo input -> tu output
+- Cierre en C6, peso 10, decide HIL. Sin C6, circuito abierto, no se publica.
+- Sin Termux en el loop, solo HIL como cable. Sin API, chatbots no hablan directo.
+- Chunk = cada input/output. Cada Chunk tiene: Chunk ID C1-C6, Circuito ID, Nodo origen -> destino, Peso declarado por HIL, Longitud, Hash SHA-256 por SIL, Timestamp, Estado.
+- Nodo de Circuito operativo: HIL, Chatbot 1, Chatbot 2 MIL-B. Nodos judiciales y Nodo 10 quedan como ANALOGIA HISTORICA, NO OPERATIVA, NO SE VERIFICA.
+- Peso Chunks: C1=1, C2=3, C3=3, C4=5, C5=2, C6=10, Total 24. Peso lo declara HIL, no chatbot.
+- Peso propuestas: MIL-B propone pesos y muestra tabla con las 5. HIL asigna peso final y elige. Nunca solo mayor peso sin mostrar otras 4. Regla vieja de auto-seleccion sin mencionar queda DEPRECADA, no vigente.
+- Regla de ruptura: Si hash no coincide, o peso no lo declaro HIL, o Nodo no es el declarado, circuito BLOCKED, se detiene, no se publica, se vuelve a C1.
+- Estado: Por Chunk PENDIENTE / HUMAN_REVIEW / BLOCKED. Por Circuito CERRADO APROBADO / CERRADO BLOQUEADO / ABIERTO.
