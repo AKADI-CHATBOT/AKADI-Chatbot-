@@ -77,3 +77,7 @@ arcface.onnx
 *.bak
 *.bak.*
 PAQUETE_COMPLETO_v1.5.md
+# Exclusiones locales HIL: Paquete completo para móvil + backups temporales – NO subir al repositorio
+PAQUETE_COMPLETO*.md
+_backup_temp_/
+_backup_temp_*/
