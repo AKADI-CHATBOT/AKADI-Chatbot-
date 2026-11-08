@@ -30,3 +30,19 @@ Audita este input:
 - Secciones 1 a 35 quedan como INTEGRADO PROPUESTA, DECLARADO, no como originales recuperados.
 - Sistema dual sigue DECLARADO, no VERIFICADO.
 - GCELL 4 capas para texto. Imagen 4 capas mas 5 metricas, total 9 elementos.
+# BOOT SINCRONIZADO PARA OTRO CHATBOT (Bash‑Handoff)
+PESOS=(
+  "arcface:0.40"
+  "fourier:0.30"
+  "edge:0.15"
+  "ssim:0.10"
+  "color:0.05"
+)
+UMBRALES_MINIMOS=(
+  "arcface:0.65"
+  "fourier:0.70"
+  "edge:0.50"
+  "ssim:0.50"
+  "color:0.30"
+)
+UMBRAL_ARCFACE=0.65
