@@ -158,8 +158,13 @@ def audit():
     request.files["generated"].save(generated_path)
 
     # ─────────────────────────────────────────────────────────
-    # 3. EJECUTAR MOTOR (con MAXCAP de tiempo)
+    # 3. BORRAR EVIDENCIA ANTERIOR + EJECUTAR MOTOR (FAIL‑CLOSED exit 0 obligatorio)
     # ─────────────────────────────────────────────────────────
+    out_path = os.path.join(EVIDENCE_DIR, "composite_audit.json")
+    # Borrar archivo previo para garantizar que sea generado en esta ejecución
+    if os.path.exists(out_path):
+        os.remove(out_path)
+
     try:
         result = subprocess.run(
             [ENGINE_SCRIPT, original_path, generated_path, "preservation"],
@@ -168,6 +173,15 @@ def audit():
             timeout=MAXCAP_TIMEOUT_SEG
         )
         log_output = result.stdout + result.stderr
+
+        # Regla dura: rechazar si motor no retorna código 0
+        if result.returncode != 0:
+            return jsonify({
+                "status": "BLOCKED",
+                "reason": "MOTOR_FALLO",
+                "detalle": f"Motor terminó con código {result.returncode}. Se ignora cualquier evidencia anterior.",
+                "log_tail": log_output[-500:]
+            }), 503
 
     except subprocess.TimeoutExpired:
         return jsonify({
@@ -184,22 +198,28 @@ def audit():
         }), 500
 
     # ─────────────────────────────────────────────────────────
-    # 4. LEER EVIDENCIA
+    # 4. LEER EVIDENCIA (solo si motor terminó exitosamente)
     # ─────────────────────────────────────────────────────────
-    out_path = os.path.join(EVIDENCE_DIR, "composite_audit.json")
     if not os.path.exists(out_path):
         return jsonify({
             "status": "BLOCKED",
             "reason": "SIN_EVIDENCIA",
-            "detalle": "El motor no generó composite_audit.json.",
+            "detalle": "El motor exitoso no generó composite_audit.json.",
             "log_tail": log_output[-500:]
         }), 500
 
-    with open(out_path) as f:
-        data = json.load(f)
+    try:
+        with open(out_path, "r", encoding="utf‑8") as f:
+            data = json.load(f)
+    except json.JSONDecodeError:
+        return jsonify({
+            "status": "BLOCKED",
+            "reason": "JSON_CORRUPTO",
+            "detalle": "composite_audit.json no contiene JSON válido"
+        }), 500
 
     # ─────────────────────────────────────────────────────────
-    # 5. SELLAR CON SHA-256
+    # 5. SELLAR CON SHA‑256
     # ─────────────────────────────────────────────────────────
     hash_evidencia = hashlib.sha256(
         json.dumps(data, sort_keys=True).encode()

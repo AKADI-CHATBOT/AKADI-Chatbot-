@@ -35,12 +35,24 @@ UMBRAL_EDGE = 0.50
 # Pesos (del README)
 PESOS = {
     "arcface": 0.40,   # 40% - Hard Gate
-    "fourier": 0.30,   # 30% - Anti-hallucination
-    "edge": 0.15,    # 15% - Estructura (era 20%, corregido)
-    "ssim": 0.10,      # 10% - Similitud
-    "color": 0.05      # 5%  - Cromática
-}  # TOTAL: 100%
+    "fourier": 0.30,   # 30% - Anti‑hallucination
+    "edge": 0.15,    # 15% - Estructura (era 20 %, corregido el 2026‑11‑08)
+    "ssim": 0.10,      # 10 % - Similitud
+    "color": 0.05      # 5 %  - Cromática
+}  # TOTAL: 100 %
 
+# Umbrales mínimos obligatorios (Fail‑Closed): cualquiera por debajo → BLOCKED
+UMBRALES_MINIMOS = {
+    "arcface": 0.65,
+    "fourier": 0.70,
+    "edge": 0.50,
+    "ssim": 0.50,
+    "color": 0.30
+}
+
+# Validación: pesos deben sumar 1.0
+if abs(sum(PESOS.values()) - 1.0) > 1e-6:
+    raise ValueError("PESOS deben sumar exactamente 100 %")
 
 def calcular_hash_imagen(path):
     """Calcula SHA-256 de una imagen."""
@@ -167,7 +179,7 @@ def capa_composite(orig_path, gen_path):
     - Color (huella cromática) → 5%
     """
     metricas = {
-        "cosine": 0.0,
+        "arcface": 0.0,
         "fourier": 0.0,
         "edge": 0.0,
         "ssim": 0.0,
@@ -195,7 +207,7 @@ def capa_composite(orig_path, gen_path):
 
             emb_o = get_embedding(orig_path)
             emb_g = get_embedding(gen_path)
-            metricas["cosine"] = float(
+            metricas["arcface"] = float(
                 np.dot(emb_o, emb_g) / (np.linalg.norm(emb_o) * np.linalg.norm(emb_g))
             )
         else:
@@ -298,7 +310,7 @@ def capa_composite(orig_path, gen_path):
 
     # Calcular score ponderado
     score = (
-        metricas["cosine"] * PESOS["arcface"] +
+        metricas["arcface"] * PESOS["arcface"] +
         metricas["fourier"] * PESOS["fourier"] +
         metricas["edge"] * PESOS["edge"] +
         metricas["ssim"] * PESOS["ssim"] +
@@ -306,7 +318,7 @@ def capa_composite(orig_path, gen_path):
     )
 
     # Veredicto con Hard Gate (ArcFace es el juez principal)
-    if metricas["cosine"] < UMBRAL_ARCFACE:
+    if metricas["arcface"] < UMBRAL_ARCFACE:
         veredicto = "BLOCKED"
         razon = f"Hard Gate Identidad: ArcFace {metricas['cosine']:.4f} < {UMBRAL_ARCFACE}"
     elif score >= 0.70:

@@ -431,3 +431,105 @@ Nota de honestidad Bloque 36: Secciones 1 a 35 no estan en este archivo AGF_CHAT
 - Archivo local, no se commitea, en .gitignore.
 - Para movil: copiar a /sdcard/Download para enviar por WhatsApp.
 - README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 mas 5 total 9.
+
+## 54. CIR‑MEJ‑001 – REGISTRO CHUNKS DE MEJORA 2026‑11‑08 (ABIERTO)
+- Circuito ID general para todos los Chunks siguientes: CIR‑MEJ‑001
+- Estado general circuito: ABIERTO (no cerrar hasta terminar P1‑P5 + Longitud & Hash calculados por Chatbot 1 + validación final)
+
+### P1 (Chunk P1 – Definitivo tras confirmación HIL)
+- Chunk ID: P1
+- Circuito ID: CIR‑MEJ‑001
+- Nodo origen → destino: HIL → Chatbot 1
+- Peso declarado por HIL: 6
+- Longitud: [Calcular Chatbot 1]
+- Hash SHA‑256 por Chatbot 1: [Calcular Chatbot 1]
+- Timestamp: 2026‑11‑08 08:25:04
+- Estado Chunk: EJECUTADO
+- Gerundio núcleo (HIL): alineando
+- Entropía (HIL): Alta incertidumbre actual por mapeo C1‑C6 desalineado respecto a las etapas cognitivas del diccionario de gerundios
+- Asimetría (HIL): HIL conoce el mapeo objetivo definitivo C1‑C6; Chatbot 1 debe implementarlo para eliminar la desalineación
+- Estado Circuito: ABIERTO
+- Título mejora: Alinear el mapeo C1‑C6 con las etapas cognitivas definidas en el diccionario de gerundios
+- Justificación (HIL): Es la base estructural obligatoria; sin este mapeo correcto los demás Chunks pierden su asignación y no se puede rellenar gerundio núcleo, entropía y asimetría por cada C1‑C6
+
+### P2 (Chunk P2 – Definitivo tras confirmación HIL)
+- Chunk ID: P2
+- Circuito ID: CIR‑MEJ‑001
+- Nodo origen → destino: HIL → Chatbot 1
+- Peso declarado por HIL: 3
+- Longitud: [Calcular Chatbot 1]
+- Hash SHA‑256 por Chatbot 1: [Calcular Chatbot 1]
+- Timestamp: 2026‑11‑08 08:30:00
+- Estado Chunk: PENDIENTE
+- Gerundio núcleo (HIL): delimitando
+- Entropía (HIL): Incertidumbre por ambigüedad al usar dos gerundios por cada Chunk C1‑C6
+- Asimetría (HIL): HIL requiere un único gerundio núcleo por Chunk; Chatbot 1 debe asignarlo para eliminar la ambigüedad
+- Estado Circuito: ABIERTO
+- Título mejora: Asignar un solo gerundio núcleo por cada Chunk C1‑C6 (eliminando dobles gerundios por etapa)
+- Justificación (HIL): Cumple el campo obligatorio “Gerundio núcleo” definido en el Kernel; evita ambigüedad al registrar qué acción cognitiva representa cada Chunk
+
+### P3 (Chunk P3 – Definitivo tras confirmación HIL)
+- Chunk ID: P3
+- Circuito ID: CIR‑MEJ‑001
+- Nodo origen → destino: HIL → Chatbot 1
+- Peso declarado por HIL: 2
+- Longitud: [Calcular Chatbot 1]
+- Hash SHA‑256 por Chatbot 1: [Calcular Chatbot 1]
+- Timestamp: 2026‑11‑08 08:31:30
+- Estado Chunk: PENDIENTE
+- Gerundio núcleo (HIL): completando
+- Entropía (HIL): Incertidumbre generada por falta del valor de Longitud en los registros C1‑C6
+- Asimetría (HIL): HIL conoce que Longitud es un campo obligatorio del Chunk; Chatbot 1 debe incorporar su cálculo para cumplir la estructura vigente
+- Estado Circuito: ABIERTO
+- Título mejora: Agregar cálculo de Longitud del contenido para cada Chunk C1‑C6
+- Justificación (HIL): Completa un campo obligatorio faltante de la estructura oficial del Chunk registrada en el repositorio
+
+### P4 (Chunk P4 – Definitivo tras confirmación HIL)
+- Chunk ID: P4
+- Circuito ID: CIR‑MEJ‑001
+- Nodo origen → destino: HIL → Chatbot 1
+- Peso declarado por HIL: 2
+- Longitud: [Calcular Chatbot 1]
+- Hash SHA‑256 por Chatbot 1: [Calcular Chatbot 1]
+- Timestamp: 2026‑11‑08 08:33:00
+- Estado Chunk: PENDIENTE
+- Gerundio núcleo (HIL): estandarizando
+- Entropía (HIL): Incertidumbre por redacciones distintas al declarar Entropía y Asimetría en los Chunks C1‑C6
+- Asimetría (HIL): HIL conoce el formato uniforme requerido para estos dos campos; Chatbot 1 debe crear la plantilla fija para evitar variaciones en cada registro
+- Estado Circuito: ABIERTO
+- Título mejora: Crear plantilla fija para registrar Entropía y Asimetría declaradas por HIL en cada Chunk
+- Justificación (HIL): Estandariza el formato de dos campos obligatorios declarados por HIL y evita redacciones distintas en cada registro
+
+### P5 (Chunk P5 – Definitivo tras confirmación HIL)
+- Chunk ID: P5
+- Circuito ID: CIR‑MEJ‑001
+- Nodo origen → destino: HIL → Chatbot 1
+- Peso declarado por HIL: 1
+- Longitud: [Calcular Chatbot 1]
+- Hash SHA‑256 por Chatbot 1: [Calcular Chatbot 1]
+- Timestamp: 2026‑11‑08 08:34:20
+- Estado Chunk: PENDIENTE
+- Gerundio núcleo (HIL): actualizando
+- Entropía (HIL): Incertidumbre generada por lista de estados del circuito desactualizada
+- Asimetría (HIL): HIL conoce los tres estados vigentes del circuito (ABIERTO / CERRADO APROBADO / CERRADO BLOQUEADO); Chatbot 1 debe actualizar toda la cadena C1‑C6 para coincidir con esa lista
+- Estado Circuito: ABIERTO
+- Título mejora: Actualizar la lista de estados del circuito (ABIERTO / CERRADO APROBADO / CERRADO BLOQUEADO) en toda la cadena C1‑C6
+- Justificación (HIL): Corrige la definición anterior para coincidir con los tres estados registrados en el Kernel
+
+### 54.1 Mapeo objetivo C1‑C6 – P1 EJECUTADO
+> Fecha ejecución: 2026‑11‑08 | Circuito: CIR‑MEJ‑001 | Alineación completada según etapas cognitivas definidas | Peso total confirmado = 24
+- C1 – Recepción inicial | Peso = 1 | Captura y validación sintáctica de la entrada original antes de cualquier procesamiento
+- C2 – Clasificación categoría | Peso = 3 | Asignación formal de categoría al contenido recibido según el glosario del Kernel
+- C3 – Evaluación de overclaim | Peso = 3 | Revisión de coherencia entre categoría asignada y evidencia disponible para detectar afirmaciones excesivas
+- C4 – Procesamiento principal | Peso = 5 | Ejecución de la tarea solicitada una vez superada la validación de overclaim
+- C5 – Generación de salida | Peso = 2 | Construcción del output final respetando todas las reglas Fail‑Closed definidas
+- C6 – Cierre y sellado | Peso = 10 | Validación final por HIL, cálculo de hash y definición del estado final del circuito
+
+### 54.2 Gerundios núcleo C1‑C6 – P2 PENDIENTE
+> Circuito: CIR‑MEJ‑001 | Asignación única de gerundio por etapa confirmada por HIL
+‑ C1 – Recibiendo | Recepción inicial
+‑ C2 – Clasificando | Clasificación categoría
+‑ C3 – Evaluando | Evaluación overclaim
+‑ C4 – Procesando | Procesamiento principal
+‑ C5 – Generando | Generación salida
+‑ C6 – Sellando | Cierre y sellado
