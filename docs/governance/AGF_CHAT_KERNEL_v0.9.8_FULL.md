@@ -414,3 +414,12 @@ Nota de honestidad Bloque 36: Secciones 1 a 35 no estan en este archivo AGF_CHAT
 - Cada propuesta P1-P5 es Chunk con Hash, Peso justificado, Entropia, Asimetria, Estado. Ver diccionario v1.7.
 - Diccionario referencia v1.7 vigente / pendiente actualizacion a v1.8 por HIL.
 - README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 mas 5 total 9.
+
+## 52. PRE-CHECK 2 NIVELES v1.9 - REGLA FIJA PARA TODO CAT - 2026-11-07
+- Antes de todo cat >>, hacer pre-check 2 niveles: 1 Cabecera existe = DUPLICADO aborta, 2 Bullet existe sin cabecera = ADVERTENCIA requiere revision MIL-B.
+- Antes de grep, verificar existencia: si [ ! -f "$B" ] = NO EXISTE aborta codigo 2. Sin este check, grep da No such file y PASS falso.
+- Sin cd en el script. Usar R="$HOME/AGF-v8.0-MAX-Identity-Preservation-Engine" + B="$R/docs/governance/CHATBOT_BOOT_PROMPT.md" + K="$R/docs/governance/AGF_CHAT_KERNEL_v0.9.8_FULL.md" para que funcione desde ~ en Termux movil.
+- En subshell ( ) para que exit 1 no cierre Termux. Con clear primero si se quiere limpio.
+- Patron cabecera sin ## ni guion: usar nucleo PROMPT FIJO PROPUESTAS v1.8, no ## 18. ni guion que se rompe al pegar en movil.
+- Diccionario referencia v1.7 vigente / pendiente actualizacion a v1.9 por HIL.
+- README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 mas 5 total 9.
