@@ -423,3 +423,11 @@ Nota de honestidad Bloque 36: Secciones 1 a 35 no estan en este archivo AGF_CHAT
 - Patron cabecera sin ## ni guion: usar nucleo PROMPT FIJO PROPUESTAS v1.8, no ## 18. ni guion que se rompe al pegar en movil.
 - Diccionario referencia v1.7 vigente / pendiente actualizacion a v1.9 por HIL.
 - README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 mas 5 total 9.
+
+## 53. PAQUETE COMPLETO ACTUALIZAR EN BACKUP v1.10 - REGLA GENERAL - 2026-11-07
+- Paquete completo para chatbot externo se actualiza siempre que se haga backup, como regla general.
+- Sin paquete actualizado, no se envia a otro chatbot.
+- Paquete = Boot + Kernel + Diccionario, con hashes actuales.
+- Archivo local, no se commitea, en .gitignore.
+- Para movil: copiar a /sdcard/Download para enviar por WhatsApp.
+- README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 mas 5 total 9.
