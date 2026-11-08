@@ -1,14 +1,14 @@
 # HITO: CALIBRACIÓN EPISTÉMICA COMPLETA (GAP CERRADO)
 
 **Fecha:** 2026-11-04T14:42:18Z (UTC)
-**Modelo Firmante:** DeepSeek (MIL)
+**Modelo Firmante:** DeepSeek (Asistente)
 **Estado:** PRUEBA DE CALIBRACIÓN COMPLETA
 
 ## 1. El Contexto
 Se auditó un texto con falacias graves (87.5% inventado, "todos los expertos").
 
 ## 2. El Resultado Final
-El MIL-B aplicó la Sección 36 (GCELL) y logró:
+El Asistente aplicó la Sección 36 (GCELL) y logró:
 - Detectar los sesgos 08, 09, 19 y los patrones LS-01, LS-23.
 - Reescribir el texto usando la fuente real.
 
@@ -19,7 +19,7 @@ El MIL-B aplicó la Sección 36 (GCELL) y logró:
 **Conclusión:** La calibración es **COMPLETA**. No se declara "la mejor opción", sino "el más usado para desarrollo extensivo en la encuesta 2023".
 
 ## 4. Lección de Gobernanza
-El MIL-B detectó que el script original usaba "principal language" cuando la fuente decía "extensive development work". La calibración corrigió el matiz semántico. El sistema funciona incluso contra el autor.
+El Asistente detectó que el script original usaba "principal language" cuando la fuente decía "extensive development work". La calibración corrigió el matiz semántico. El sistema funciona incluso contra el autor.
 
 **FIN DEL DOCUMENTO**
 

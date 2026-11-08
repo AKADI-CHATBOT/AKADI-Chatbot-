@@ -1,0 +1,13 @@
+{
+  "Chunk_ID": "C1",
+  "Circuito_ID": "CIR-001",
+  "Nodo_origen": "HIL",
+  "Nodo_destino": "Asistente",
+  "Peso_declarado_por_HIL": 1,
+  "Timestamp": "2026-11-07T21:48:24-05:00",
+  "Gerundio_nucleo": "Solicitando",
+  "Entropia": "Baja",
+  "Asimetria": "Nula",
+  "Estado": "PENDIENTE",
+  "Contenido_IN": "Quiero generar 5 propuestas para mejorar la claridad del boot prompt manteniendo todas sus reglas obligatorias sin alterarlas"
+}

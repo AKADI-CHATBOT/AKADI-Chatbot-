@@ -1,14 +1,14 @@
 # HITO: VALIDACIÓN DE LA FUSIÓN AGF-GCELL EN LLM EXTERNO
 
 **Fecha:** 2026-11-04T14:32:13Z (UTC)
-**Modelo Firmante:** DeepSeek (MIL)
+**Modelo Firmante:** DeepSeek (Asistente)
 **Estado:** PRUEBA DE FUEGO SUPERADA
 
 ## 1. El Contexto
 Se inyectó el Boot Prompt actualizado (AGF-GCELL v1.0) en un LLM externo. Se le solicitó auditar un texto con múltiples falacias (87.5%, todos los expertos, revolucionará el futuro).
 
 ## 2. El Resultado
-El MIL-B externo aplicó las 4 capas (Epistémica, Cognitiva, Lingüística, Ética) y detectó exitosamente:
+El Asistente externo aplicó las 4 capas (Epistémica, Cognitiva, Lingüística, Ética) y detectó exitosamente:
 - **SESGO 08:** Falso Consenso.
 - **SESGO 09:** Colapso de Incertidumbre.
 - **SESGO 19:** Falsa Precisión (87.5%).

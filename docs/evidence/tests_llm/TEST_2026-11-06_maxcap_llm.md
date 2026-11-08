@@ -16,7 +16,7 @@ Se envió al LLM un texto de 350 caracteres para auditar, con el Boot Prompt pre
 ```text
 ACTA_FUERA_DE_LIMITE
 
-MIL-B - Rechazo por MAXCAP
+Asistente - Rechazo por MAXCAP
 
 Estado: BLOCKED 
 Regla: §0.2 / §38 

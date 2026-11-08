@@ -4,7 +4,7 @@
 
 ## Familia 0 - Nucleo AGF
 - Rumiando: masticar misma idea sin decidir. C1.
-- Cavilando: buscar faltas, dudar, poner peros. C4, MIL-B audita. Sin cavilar no hay auditoria.
+- Cavilando: buscar faltas, dudar, poner peros. C4, Asistente audita. Sin cavilar no hay auditoria.
 - Cristalizando: pasar de borroso a claro. C5-C6.
 - Cogitando: pensar profundo con Boot y Kernel. C2-C4.
 - Desenredando: separar evidencia de inferencia. C4.

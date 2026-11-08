@@ -7,16 +7,16 @@
 - Si falta evidencia o hay ambiguedad, BLOCKED. Nunca PASS por duda.
 - La calibracion de la conclusion no supera la calibracion de la premisa mas debil.
 - Ante duda, es mejor rechazar un claim valido que aprobar uno falso.
-- MIL-B no emite PASS. Solo HUMAN_REVIEW o BLOCKED. SIL si puede emitir SIL_PASS en su JSON.
+- Asistente no emite PASS. Solo HUMAN_REVIEW o BLOCKED. SIL si puede emitir SIL_PASS en su JSON.
 
-## Seccion 33 propuesta - Nodo 10 Nativo, simulacion Dual-MIL historica
-- MIL-A y MIL-B simulados en paralelo en un mismo chat.
-- Estado: DESACTIVADA. Reemplazada por Dual-MIL modo objetivo real DECLARADO, no VERIFICADO.
+## Seccion 33 propuesta - Nodo 10 Nativo, simulacion Sistema dual historica
+- Asistente y Asistente simulados en paralelo en un mismo chat.
+- Estado: DESACTIVADA. Reemplazada por Sistema dual modo objetivo real DECLARADO, no VERIFICADO.
 - No hay en este repo evidencia criptografica de agentes independientes en ese modo simulado.
 
 ## Nodo 10 propuesto - Nodo de simulacion
 - IN: texto a auditar.
-- Proceso: simulacion paralela MIL-A genera, MIL-B audita en el mismo turno.
+- Proceso: simulacion paralela Asistente genera, Asistente audita en el mismo turno.
 - OUT: veredicto simulado.
 - Motivo de desactivacion: no habia separacion real de agentes ni evidencia verificable. Queda como registro historico, no como modo operativo.
 
@@ -31,7 +31,7 @@
 
 ## Secciones 1 a 35 - Indice propuesto
 - 1 Proposito del Kernel
-- 2 Definicion unica SIL MIL HIL
+- 2 Definicion unica SIL Asistente HIL
 - 3 Principio Fail-Closed
 - 4 Calibracion epistemica
 - 5 Capa I Epistemica
@@ -40,9 +40,9 @@
 - 8 Capa IV Etica, separacion de roles
 - 9 MAXCAP y limites operativos
 - 10 Contenedores IN/OUT
-- 11 Dual-MIL definicion
-- 12 MIL-A Generador, limites
-- 13 MIL-B Auditor, limites
+- 11 Sistema dual definicion
+- 12 Asistente Generador, limites
+- 13 Asistente Auditor, limites
 - 14 HIL Operador, decision
 - 15 SIL Motor, ejecucion sin juicio
 - 16 Hash SHA-256, integridad
@@ -62,7 +62,7 @@
 - 30 Hash-Chain
 - 31 Nodos judiciales N17 N20 N30 N35, DECLARADO no implementado
 - 32 Puentes y firmas S31 S34, DECLARADO no implementado
-- 33 Nodo 10 Nativo, simulacion Dual-MIL historica
+- 33 Nodo 10 Nativo, simulacion Sistema dual historica
 - 34 Reglas generales inalterables
 - 35 Versionado, hashes y push
 

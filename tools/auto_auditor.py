@@ -17,9 +17,9 @@ def auditar_codigo(ruta_archivo):
     with open(ruta_archivo, "r") as f:
         codigo = f.read()
         
-    print("🛡️ [AGF Nivel 5] Enviando código a MIL-B para auditoría automática...")
+    print("🛡️ [AGF Nivel 5] Enviando código a Asistente para auditoría automática...")
     
-    prompt_sistema = ("Eres el MIL-B del Kernel AGF. Actúas como un auditor adversarial Fail-Closed. "
+    prompt_sistema = ("Eres el Asistente del Kernel AGF. Actúas como un auditor adversarial Fail-Closed. "
                       "Analiza el siguiente código. Si tiene vulnerabilidades, fallos de seguridad o "
                       "lógica Fail-Open, responde ESTRICTAMENTE con la palabra RECHAZADO. "
                       "Si es completamente seguro, responde ACEPTADO.")
@@ -43,13 +43,13 @@ def auditar_codigo(ruta_archivo):
         response.raise_for_status()
         resultado = response.json()["choices"][0]["message"]["content"].strip().upper()
         
-        print(f"📡 Veredicto de MIL-B: {resultado}")
+        print(f"📡 Veredicto de Asistente: {resultado}")
         
         if "RECHAZADO" in resultado:
-            print("❌ CÓDIGO BLOQUEADO: MIL-B detectó un riesgo de seguridad.")
+            print("❌ CÓDIGO BLOQUEADO: Asistente detectó un riesgo de seguridad.")
             return False
         elif "ACEPTADO" in resultado:
-            print("✅ CÓDIGO APROBADO: MIL-B no encontró vulnerabilidades.")
+            print("✅ CÓDIGO APROBADO: Asistente no encontró vulnerabilidades.")
             return True
         else:
             print(f"🟡 RESPUESTA AMBIGUA: {resultado}. Bloqueando por seguridad (Fail-Closed).")
