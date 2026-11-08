@@ -246,3 +246,9 @@ GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
 - Peso propuestas: MIL-B propone pesos y muestra tabla con las 5. HIL asigna peso final y elige. Nunca solo mayor peso sin mostrar otras 4. Regla vieja de auto-seleccion sin mencionar queda DEPRECADA, no vigente.
 - Regla de ruptura: Si hash no coincide, o peso no lo declaro HIL, o Nodo no es el declarado, circuito BLOCKED, se detiene, no se publica, se vuelve a C1.
 - Estado: Por Chunk PENDIENTE / HUMAN_REVIEW / BLOCKED. Por Circuito CERRADO APROBADO / CERRADO BLOQUEADO / ABIERTO.
+
+## 17. DICCIONARIO GERUNDIOS ENTROPIA ASIMETRIA v1.7 - 2026-11-07
+- Ver docs/governance/DICCIONARIO_GERUNDIOS_ENTROPIA_ASIMETRIA.md, archivo aparte para no truncar Boot.
+- Cada Chunk declara Gerundio nucleo + Entropia + Asimetria. HIL declara, chatbot no calcula.
+- Cavilando es obligatorio en C4. Sin cavilar no hay auditoria.
+- Propuestas mejoradas: cada P1-P5 es Chunk con Hash, Peso justificado, tabla con las 5, umbral 7, segunda ronda si todas BLOCKED.

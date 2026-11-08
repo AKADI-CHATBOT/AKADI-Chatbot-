@@ -400,3 +400,10 @@ Nota de honestidad Bloque 36: Secciones 1 a 35 no estan en este archivo AGF_CHAT
 - Regla de ruptura: Si hash no coincide, o peso no lo declaro HIL, o Nodo no es el declarado, circuito BLOCKED, se detiene, no se publica, se vuelve a C1.
 - Estado: Por Chunk PENDIENTE / HUMAN_REVIEW / BLOCKED. Por Circuito CERRADO APROBADO / CERRADO BLOQUEADO / ABIERTO.
 - README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 mas 5 total 9.
+
+## 50. DICCIONARIO GERUNDIOS ENTROPIA ASIMETRIA v1.7 - 2026-11-07
+- Ver docs/governance/DICCIONARIO_GERUNDIOS_ENTROPIA_ASIMETRIA.md, archivo aparte para no truncar Kernel.
+- Cada Chunk declara Gerundio nucleo + Entropia + Asimetria. HIL declara, chatbot no calcula.
+- Cavilando es obligatorio en C4. Sin cavilar no hay auditoria.
+- Propuestas mejoradas: cada P1-P5 es Chunk con Hash, Peso justificado, tabla con las 5, umbral 7, segunda ronda si todas BLOCKED.
+- README NO ES EVIDENCIA. GCELL 4 capas para texto. Imagen 4 mas 5 total 9.
