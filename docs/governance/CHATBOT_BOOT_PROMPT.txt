@@ -252,3 +252,9 @@ GCELL es para texto, 4 capas. Imagen es para imagenes, 4 mas 5.
 - Cada Chunk declara Gerundio nucleo + Entropia + Asimetria. HIL declara, chatbot no calcula.
 - Cavilando es obligatorio en C4. Sin cavilar no hay auditoria.
 - Propuestas mejoradas: cada P1-P5 es Chunk con Hash, Peso justificado, tabla con las 5, umbral 7, segunda ronda si todas BLOCKED.
+
+## 18. PROMPT FIJO PROPUESTAS v1.8 - REGLA GENERAL SIN ALTERACIONES - 2026-11-07
+- Prompt fijo, automatico, sin alteraciones: Genera 5 propuestas. Propone pesos sugeridos con justificacion, pero no ordenes ni elijas ganador. HIL asigna peso final y ordena por peso. Termina en HUMAN_REVIEW.
+- Si el chatbot altera, recorta, ordena solo, o elige ganador, rompe la regla y va BLOCKED.
+- Cada propuesta P1-P5 es Chunk con Hash, Peso justificado, Entropia, Asimetria, Estado. Ver diccionario v1.7.
+- Diccionario referencia v1.7 vigente / pendiente actualizacion a v1.8 por HIL.
