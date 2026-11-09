@@ -81,3 +81,5 @@ PAQUETE_COMPLETO_v1.5.md
 PAQUETE_COMPLETO*.md
 _backup_temp_/
 _backup_temp_*/
+tmp_edicion/
+*.save
