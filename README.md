@@ -20,6 +20,6 @@ README NO ES EVIDENCIA. Para auditar, lee boot y kernel completos y cumple lo qu
 
 ## Hashes para verificar que leiste boot y kernel
 - Boot: 98038eaea9a36343203c7f517bf562a4b4e0fd14af2da55a3da18de84051d950
-- Kernel: d1be9264fbd9de38355d02b6ec03a0162bed0f30a1975f15fee0bc9459af6a7c
+- Kernel: 53b178ebdad254534f84c6040ed5b52ff745947684ca919fd13d776158aaa38e
 
 No es sistema verificado completo. Es trabajo en progreso con pruebas locales medidas.
