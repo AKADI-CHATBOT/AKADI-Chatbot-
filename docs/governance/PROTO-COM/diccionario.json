@@ -1,0 +1,27 @@
+{
+  "version": "v3.0",
+  "actualizado": "2026-11-09",
+  "familias": {
+    "mango": {
+      "descripcion": "Fruta o parte de herramienta",
+      "miembros": [
+        {
+          "id": "C-004",
+          "nombre": "Fruta",
+          "codigo": "MAN-F",
+          "seguro": ["comer", "jugo", "arbol", "dulce"],
+          "posible": ["maduro", "fresco"],
+          "conflicto": ["viejo", "desgastado"]
+        },
+        {
+          "id": "C-005",
+          "nombre": "Empunadura",
+          "codigo": "MAN-O",
+          "seguro": ["agarrar", "martillo", "herramienta"],
+          "posible": ["roto", "partido"],
+          "conflicto": ["viejo", "desgastado"]
+        }
+      ]
+    }
+  }
+}
