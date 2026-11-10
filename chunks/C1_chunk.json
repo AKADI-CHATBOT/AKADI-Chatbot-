@@ -4,10 +4,72 @@
   "Nodo_origen": "HIL",
   "Nodo_destino": "Asistente",
   "Peso_declarado_por_HIL": 1,
-  "Timestamp": "2026-11-07T21:48:24-05:00",
-  "Gerundio_nucleo": "Solicitando",
-  "Entropia": "Baja",
-  "Asimetria": "Nula",
-  "Estado": "PENDIENTE",
-  "Contenido_IN": "Quiero generar 5 propuestas para mejorar la claridad del boot prompt manteniendo todas sus reglas obligatorias sin alterarlas"
+  "Timestamp_IN": "2026-11-07T21:48:24-05:00",
+  "Timestamp_OUT": "2026-11-09T19:45:00-05:00",
+  "Gerundio": "Solicitando",
+  "Familia_Gerundio": "Busqueda / Ponderacion",
+  "Entropia_IN": "Baja",
+  "Tipo_Entropia_IN": "Baja - 1 solo significado",
+  "Entropia_OUT": "Baja",
+  "Tipo_Entropia_OUT": "Baja - 5 propuestas claras",
+  "Asimetria": "Vocabulario / Contexto",
+  "Tipo_Asimetria": "Vocabulario, Contexto",
+  "Estado": "APROBADO",
+  "Normalizacion_UTF8": "OK - NFC, sin BOM, LF, sin guion raro U+2011, od -c guion normal 055",
+  "Contenido_IN": "Quiero generar 5 propuestas para mejorar la claridad del boot prompt manteniendo todas sus reglas obligatorias sin alterarlas",
+  "Longitud_IN": 125,
+  "Hash_IN": "95c68e0edf38c856005bab4d285e7defbe56b3d087e590f7ac9092af8e8e8133",
+  "Desconstruccion_IN": {
+    "Verbo": "Generar",
+    "Cantidad": 5,
+    "Objeto": "propuestas",
+    "Objetivo": "mejorar la claridad del boot prompt",
+    "Restriccion": "manteniendo todas sus reglas obligatorias sin alterarlas",
+    "Gerundio": "Solicitando",
+    "Familia_Gerundio": "Busqueda / Ponderacion",
+    "Entropia": "Baja",
+    "Asimetria": "Vocabulario / Contexto"
+  },
+  "Contenido_OUT": "P1 Separar reglas obligatorias en seccion fija. P2 Agregar tabla contenedor IN/OUT con ejemplo C1. P3 Mover diccionario PROTO-COM a anexo. P4 Agregar plantilla instruccion 5 datos al final. P5 Agregar seccion peso automatico y validacion fail-closed.",
+  "Longitud_OUT": 250,
+  "Hash_OUT": "1e4838a3e235020a4cce7fc6e6e8866710767c4c01775b04d58866e561b8239d",
+  "Desconstruccion_OUT": {
+    "Cantidad": 5,
+    "Propuestas": [
+      {
+        "Id": "P1",
+        "Verbo": "Separar",
+        "Objeto": "reglas obligatorias",
+        "Objetivo": "claridad sin mezclar con ejemplos"
+      },
+      {
+        "Id": "P2",
+        "Verbo": "Agregar",
+        "Objeto": "tabla contenedor IN/OUT",
+        "Objetivo": "ejemplo C1 visible"
+      },
+      {
+        "Id": "P3",
+        "Verbo": "Mover",
+        "Objeto": "diccionario PROTO-COM",
+        "Objetivo": "anexo, no dentro del boot"
+      },
+      {
+        "Id": "P4",
+        "Verbo": "Agregar",
+        "Objeto": "plantilla instruccion 5 datos",
+        "Objetivo": "IN completo fail-closed"
+      },
+      {
+        "Id": "P5",
+        "Verbo": "Agregar",
+        "Objeto": "seccion peso automatico",
+        "Objetivo": "validacion fail-closed"
+      }
+    ],
+    "Gerundio": "Proponiendo",
+    "Familia_Gerundio": "Sintesis / Destilando",
+    "Entropia": "Baja",
+    "Asimetria": "Nula"
+  }
 }
