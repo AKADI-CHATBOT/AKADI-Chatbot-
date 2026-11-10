@@ -1,0 +1,20 @@
+// PLANTILLA PROTOBUF PARA CHUNKS C1 A C ULTIMO
+// ESTADO: PENDIENTE VALIDACION HIL
+// USO: 1 plantilla para todos, no 1 por chunk
+syntax = "proto3";
+message Chunk {
+  string chunk_id = 1;
+  string contenido_in = 2;
+  string contenido_out = 3;
+  string hash_in = 4;
+  string hash_out = 5;
+  int64 longitud_in = 6;
+  int64 longitud_out = 7;
+  string timestamp_in = 8;
+  string timestamp_out = 9;
+  string hil = 10;
+  string sil = 11;
+  string mil = 12;
+  string enlace_anterior = 13;
+  string enlace_siguiente = 14;
+}
