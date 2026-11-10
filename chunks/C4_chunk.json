@@ -5,16 +5,16 @@
   "Nodo_destino": "Asistente",
   "Peso_declarado_por_HIL": 1,
   "Timestamp_IN": "2026-11-09T20:30:00-05:00",
-  "Timestamp_OUT": "",
+  "Timestamp_OUT": "2026-11-09T20:35:00-05:00",
   "Gerundio": "Solicitando",
   "Familia_Gerundio": "Busqueda / Ponderacion",
   "Entropia_IN": "Baja",
   "Tipo_Entropia_IN": "Baja - 1 solo significado",
-  "Entropia_OUT": "",
-  "Tipo_Entropia_OUT": "",
+  "Entropia_OUT": "Baja",
+  "Tipo_Entropia_OUT": "Baja - auditor claro",
   "Asimetria": "Vocabulario / Contexto",
   "Tipo_Asimetria": "Vocabulario, Contexto",
-  "Estado": "PENDIENTE",
+  "Estado": "APROBADO",
   "Normalizacion_UTF8": "OK - NFC, sin BOM, LF, sin guion raro U+2011",
   "Contenido_IN": "Quiero integrar los modulos Python y C de normalizacion UTF-8 y PROTO-COM en el auditor v1.1 para validar contenedores IN/OUT",
   "Longitud_IN": 125,
@@ -30,8 +30,15 @@
     "Entropia": "Baja",
     "Asimetria": "Vocabulario / Contexto"
   },
-  "Contenido_OUT": "",
-  "Longitud_OUT": 0,
-  "Hash_OUT": "",
-  "Desconstruccion_OUT": {}
+  "Contenido_OUT": "Auditor v1.1 creado en tools/auditor_v1_1.py. Integra normalizacion_utf8.py, PROTO-COM, Desconstruccion, Hash, Longitud, Deduplicacion y Manifiesto. Valida C1-C4 con guion raro, BOM, NFC y entropia.",
+  "Longitud_OUT": 198,
+  "Hash_OUT": "a64c78c859759aae184ae3b8fa46f860b14a01959c8cfa9f85b7847583f3a041",
+  "Desconstruccion_OUT": {
+    "Verbo": "Integrar",
+    "Objeto": "modulos y PROTO-COM en auditor v1.1",
+    "Gerundio": "Proponiendo",
+    "Familia_Gerundio": "Sintesis / Destilando",
+    "Entropia": "Baja",
+    "Asimetria": "Nula"
+  }
 }
