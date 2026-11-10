@@ -5,16 +5,16 @@
   "Nodo_destino": "Asistente",
   "Peso_declarado_por_HIL": 1,
   "Timestamp_IN": "2026-11-09T20:20:00-05:00",
-  "Timestamp_OUT": "",
+  "Timestamp_OUT": "2026-11-09T20:25:00-05:00",
   "Gerundio": "Solicitando",
   "Familia_Gerundio": "Busqueda / Ponderacion",
   "Entropia_IN": "Baja",
   "Tipo_Entropia_IN": "Baja - 1 solo significado",
-  "Entropia_OUT": "",
-  "Tipo_Entropia_OUT": "",
+  "Entropia_OUT": "Baja",
+  "Tipo_Entropia_OUT": "Baja - modulo C claro",
   "Asimetria": "Vocabulario / Contexto",
   "Tipo_Asimetria": "Vocabulario, Contexto",
-  "Estado": "PENDIENTE",
+  "Estado": "APROBADO",
   "Normalizacion_UTF8": "OK - NFC, sin BOM, LF, sin guion raro U+2011",
   "Contenido_IN": "Quiero crear la version C del modulo de normalizacion UTF-8 compilada con GCC con od -c para validar bytes en contenedores IN/OUT",
   "Longitud_IN": 129,
@@ -30,8 +30,15 @@
     "Entropia": "Baja",
     "Asimetria": "Vocabulario / Contexto"
   },
-  "Contenido_OUT": "",
-  "Longitud_OUT": 0,
-  "Hash_OUT": "",
-  "Desconstruccion_OUT": {}
+  "Contenido_OUT": "Version C creada en tools/normalizacion_utf8.c compilada con GCC. Detecta guion raro E2 80 91 (342 200 221) vs guion normal 2D (055), mide entropia Shannon, imprime od -c octal.",
+  "Longitud_OUT": 177,
+  "Hash_OUT": "2eec56eefee01636c504b173ac9316de06c0ccd38ef037f79487866a9fa450b2",
+  "Desconstruccion_OUT": {
+    "Verbo": "Crear",
+    "Objeto": "version C modulo UTF-8",
+    "Gerundio": "Proponiendo",
+    "Familia_Gerundio": "Sintesis / Destilando",
+    "Entropia": "Baja",
+    "Asimetria": "Nula"
+  }
 }
