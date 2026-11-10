@@ -5,16 +5,16 @@
   "Nodo_destino": "Asistente",
   "Peso_declarado_por_HIL": 1,
   "Timestamp_IN": "2026-11-09T21:05:00-05:00",
-  "Timestamp_OUT": "",
+  "Timestamp_OUT": "2026-11-09T21:10:00-05:00",
   "Gerundio": "Solicitando",
   "Familia_Gerundio": "Busqueda / Ponderacion",
   "Entropia_IN": "Baja",
   "Tipo_Entropia_IN": "Baja - 1 solo significado",
-  "Entropia_OUT": "",
-  "Tipo_Entropia_OUT": "",
+  "Entropia_OUT": "Baja",
+  "Tipo_Entropia_OUT": "Baja - HANDOFF claro",
   "Asimetria": "Vocabulario / Contexto",
   "Tipo_Asimetria": "Vocabulario, Contexto",
-  "Estado": "PENDIENTE",
+  "Estado": "APROBADO",
   "Normalizacion_UTF8": "OK - NFC, sin BOM, LF, sin guion raro U+2011",
   "Contenido_IN": "Quiero actualizar HANDOFF a v1.6 con C1-C4, auditor v1.1, PROTO-COM y estado comercial privado sin precio ni licencia para entrega al otro chatbot",
   "Longitud_IN": 146,
@@ -30,8 +30,15 @@
     "Entropia": "Baja",
     "Asimetria": "Vocabulario / Contexto"
   },
-  "Contenido_OUT": "",
-  "Longitud_OUT": 0,
-  "Hash_OUT": "",
-  "Desconstruccion_OUT": {}
+  "Contenido_OUT": "HANDOFF v1.6 creado en HANDOFF_OTRO_CHATBOT_v1.6.md. Incluye C1-C5 APROBADO, auditor v1.1, PROTO-COM, modulos Python y C, y estado comercial privado sin precio ni licencia. Autorizacion PENDIENTE HIL.",
+  "Longitud_OUT": 200,
+  "Hash_OUT": "450f8b0196902a016f1f4dc1159239c959c7b26fa0976a6ceec92bb9033dadc6",
+  "Desconstruccion_OUT": {
+    "Verbo": "Actualizar",
+    "Objeto": "HANDOFF a v1.6",
+    "Gerundio": "Proponiendo",
+    "Familia_Gerundio": "Sintesis / Destilando",
+    "Entropia": "Baja",
+    "Asimetria": "Nula"
+  }
 }
