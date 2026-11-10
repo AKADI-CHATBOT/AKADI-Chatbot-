@@ -5,16 +5,16 @@
   "Nodo_destino": "Asistente",
   "Peso_declarado_por_HIL": 1,
   "Timestamp_IN": "2026-11-09T20:00:00-05:00",
-  "Timestamp_OUT": "",
+  "Timestamp_OUT": "2026-11-09T20:15:00-05:00",
   "Gerundio": "Solicitando",
   "Familia_Gerundio": "Busqueda / Ponderacion",
   "Entropia_IN": "Baja",
   "Tipo_Entropia_IN": "Baja - 1 solo significado",
-  "Entropia_OUT": "",
-  "Tipo_Entropia_OUT": "",
+  "Entropia_OUT": "Baja",
+  "Tipo_Entropia_OUT": "Baja - modulo claro",
   "Asimetria": "Vocabulario / Contexto",
   "Tipo_Asimetria": "Vocabulario, Contexto",
-  "Estado": "PENDIENTE",
+  "Estado": "APROBADO",
   "Normalizacion_UTF8": "OK - NFC, sin BOM, LF, sin guion raro U+2011, od -c guion normal 055",
   "Contenido_IN": "Quiero crear el modulo de normalizacion UTF-8 con od -c y GCC para medir entropia y detectar guion raro en contenedores IN/OUT",
   "Longitud_IN": 126,
@@ -30,8 +30,15 @@
     "Entropia": "Baja",
     "Asimetria": "Vocabulario / Contexto"
   },
-  "Contenido_OUT": "",
-  "Longitud_OUT": 0,
-  "Hash_OUT": "",
-  "Desconstruccion_OUT": {}
+  "Contenido_OUT": "Modulo creado en tools/normalizacion_utf8.py con normalizar, detectar_guion_raro, od_c_octal, medir_entropia, auditar. Detecta guion raro U+2011 (342 200 221) vs guion normal (055), BOM, CRLF, NFC, entropia Shannon.",
+  "Longitud_OUT": 215,
+  "Hash_OUT": "319e1eaf50aa945effe6c377dc83692ffc17a02c16350737c3cefd37ec663e29",
+  "Desconstruccion_OUT": {
+    "Verbo": "Crear",
+    "Objeto": "modulo normalizacion UTF-8",
+    "Gerundio": "Proponiendo",
+    "Familia_Gerundio": "Sintesis / Destilando",
+    "Entropia": "Baja",
+    "Asimetria": "Nula"
+  }
 }
